@@ -1,0 +1,358 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+
+.quote-details-summary-title{
+	@extend .summary-title;
+}
+
+.quote-details-summary-container{
+	@extend .summary-container;
+	margin-bottom:$sc-small-margin;
+}
+
+.quote-details-summary-total{
+	p{
+		@extend .summary-total;
+	}
+}
+
+.quote-details-summary-subtotal{
+	p{
+		@extend .summary-subtotal;
+	}
+}
+
+.quote-details-summary-grid{
+	@extend .shopping-cart-summary-grid;
+}
+
+.quote-details-summary-grid-float{
+	@extend .summary-grid-float;
+}
+
+
+.quote-details-summary-amount-subtotal{
+	@extend .summary-grid-right;
+}
+
+.quote-details-summary-amount-discount{
+	@extend .summary-grid-right;
+}
+
+.quote-details-summary-amount-tax{
+	@extend .summary-grid-right;
+}
+
+.quote-details-summary-amount-shipping{
+	@extend .summary-grid-right;
+}
+
+.quote-details-summary-amount-total{
+	@extend .summary-grid-right;
+}
+
+.quote-details-summary-grid-left{
+	@extend .shopping-cart-summary-grid-left;
+}
+
+.quote-details-summary-grid-right{
+	@extend .shopping-cart-summary-grid-right;
+}
+
+.quote-details-summary-col{
+	@extend .col-md-4;
+}
+
+
+.quote-details-summary-col{
+	@extend .col-md-4;
+}
+
+.quote-details-content-col{
+	@extend .col-md-8;
+	margin-bottom:$sc-medium-margin;
+}
+
+.quote-details-header-title{
+	margin-bottom:$sc-small-margin;
+}
+
+.quote-details-header-back-btn{
+	@extend .button-back;
+}
+
+.quote-details-header-information{
+	margin-bottom:$sc-medium-margin;
+}
+
+.quote-details-button-download-pdf{
+	@extend .button-secondary;
+	@extend .button-medium;
+	@extend .button-generic;
+	margin-bottom:$sc-small-margin;
+}
+
+.quote-details-row-fluid{
+	@extend .row-fluid;
+}
+
+.quote-details-row{
+	@extend .row;
+}
+
+.quote-details-order-title{
+	margin-bottom:$sc-small-margin;
+}
+
+.quote-details-header-row{
+	@extend .row;
+	margin-bottom:$sc-small-margin;
+}
+
+.quote-details-row{
+	@extend .row;
+}
+
+.quote-details-header-col-left{
+	@extend .col-sm-6;
+}
+
+.quote-details-header-col-right{
+	@extend .col-sm-6;
+	text-align:right;
+}
+
+.quote-details-header-amount{
+	@extend .col-xs-12;
+}
+
+/* Quote Accordions */
+
+.quote-details-accordion-container{
+	@extend .accordion-container;
+	overflow:hidden;
+}
+
+.quote-details-accordion-head{
+	@extend .accordion-head;
+}
+
+.quote-details-accordion-head-toggle-secondary{
+	@extend .accordion-head-toggle-secondary;
+}
+
+.quote-details-accordion-head-toggle{
+	@extend .accordion-head-toggle;
+}
+
+.quote-details-accordion-toggle-icon{
+	@extend .accordion-toggle-icon;
+}
+
+.quote-details-accordion-body{
+	@extend .accordion-body;
+}
+
+.quote-details-accordion-table-header {
+	@extend .item-view-cell-navigable-header;
+	@extend .recordviews-row-header;
+	th{
+		font-weight:$sc-font-weight-normal;
+		display: none;
+	}
+}
+
+.quote-details-accordion-divider{
+	@extend .accordion-divider;
+}
+
+.quote-details-header-amount-total{
+	float:right;
+}
+
+
+.quote-details-header-label-salesrep{
+	@extend .sc-label;
+}
+
+.quote-details-header-value-salesrep{
+	@extend .sc-value;
+}
+
+.quote-details-header-label-date{
+	@extend .sc-label;
+}
+
+.quote-details-header-label-expiration-date{
+	@extend .sc-label;
+}
+
+.quote-details-header-label-request-date{
+	@extend .sc-label;
+}
+
+.quote-details-header-value-date{
+	@extend .sc-value;
+}
+
+.quote-details-header-value-expiration-date{
+	@extend .sc-value;
+}
+
+.quote-details-header-value-amount{
+	@extend .sc-value;
+}
+
+.quote-details-header-label-amount{
+	@extend .sc-label;
+}
+
+.quote-details-header-value-status{
+	@extend .sc-value;
+	color:$sc-color-primary;
+}
+
+.quote-details-header-label-status{
+	@extend .sc-label;
+}
+
+.quote-details-accordion-row{
+	@extend .row;
+	margin:0px;
+}
+
+.quote-details-accordion-label-coupon-code{
+	@extend .sc-label;
+}
+
+.quote-details-accordion-value-coupon-code{
+	@extend .sc-value;
+}
+
+.quote-details-accordion-label-coupon-code{
+	@extend .sc-label;
+}
+
+.quote-details-accordion-value-coupon-code{
+	@extend .sc-value;
+}
+
+.quote-details-accordion-label-promo-code{
+	@extend .sc-label;
+}
+
+.quote-details-accordion-value-promo-code{
+	@extend .sc-value;
+}
+
+.quote-details-accordion-label-exchange-rate{
+	@extend .sc-label;
+}
+
+.quote-details-accordion-value-exchange-rate{
+	@extend .sc-value;
+}
+
+.quote-details-accordion-label-discount{
+	@extend .sc-label;
+}
+
+.quote-details-accordion-value-discount{
+	@extend .sc-value;
+}
+
+.quote-details-accordion-label-rate{
+	@extend .sc-label;
+}
+
+.quote-details-accordion-value-rate{
+	@extend .sc-value;
+}
+
+.quote-details-billing-info-card{
+	@extend .info-card;
+	@extend .col-sm-6;
+	@extend .col-xs-12;
+}
+
+.quote-details-billing-info-card-title{
+	margin-bottom:$sc-small-margin;
+}
+
+.quote-details-expiration-date-label{
+	@extend .sc-label;
+}
+
+.quote-details-expiration-date-value{
+	@extend .sc-value;
+}
+
+.quote-details-content-col{
+	.item-view-cell-navigable-header-col-amount{
+		text-align:right;
+	}
+}
+
+
+
+.quote-details-products-table{
+	@extend .table-flex-item-navigable;
+
+	.item-views-cell-navigable-details{
+		padding-bottom: 0;
+	}
+
+	.item-views-cell-navigable-item-quantity,
+	.item-views-cell-navigable-item-unit-price,
+	.item-views-cell-navigable-amount {
+		text-align: left;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	td:last-child{
+		padding-bottom: $sc-base-padding * 3;
+	}
+
+	span {
+		display: inline;
+	}
+}
+
+
+
+.quote-details-products-table-header-image{
+	@extend .item-view-cell-navigable-header-col-image;
+}
+
+.quote-details-products-table-header-product{
+	@extend .item-view-cell-navigable-header-col-product-details;
+}
+
+.quote-details-products-table-header-qty{
+	@extend .item-view-cell-navigable-header-col-qty;
+}
+
+.quote-details-products-table-header-unitprice{
+	@extend .item-view-cell-navigable-header-col-unit-price;
+}
+
+.quote-details-products-table-header-amount{
+	@extend .item-view-cell-navigable-header-col-amount;
+}
+
+.quote-details-view{}
+.quote-details-header-label-date-icon{}
+.quote-details-header-label-date-closeoverdue{}
+.quote-details-header-label-date-icon{}
+.quote-details-header-info-sales{}
+.quote-details-header-info-request-date{}
+.quote-details-header-info-expiration-date{}
+.quote-details-header-value-date-closeoverdue{}
+.quote-details-header-info-amount{}
+.quote-details-header-info-status{}

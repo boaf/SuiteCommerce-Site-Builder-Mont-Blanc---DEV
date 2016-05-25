@@ -1,0 +1,107 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-cell-selectable-actionable{
+	&:hover{
+		background:none;
+	}
+}
+
+.item-views-cell-selectable-actionable-image{
+	@extend .col-sm-3;
+}
+
+.item-views-cell-selectable-actionable-details{
+	@extend .col-sm-6;
+}
+
+.item-views-cell-selectable-actionable-actions{
+	@extend .col-sm-3;
+}
+
+.item-views-cell-selectable-actionable-name-link{
+	@extend .medium-title-navigable;
+}
+
+.item-views-cell-selectable-actionable-thumbnail-img{
+	width:$img-large;
+}
+
+.item-views-cell-selectable-actionable-price .item-view-lead-price{
+	@extend .middle-price;
+}
+
+.item-views-cell-selectable-actionable-sku{
+	font-size:$sc-small-font-size;
+}
+
+.item-views-cell-selectable-actionable-qty{
+	clear:both;
+	display:block;
+	width:100%;
+}
+
+.item-views-cell-selectable-actionable-qty input[type=number]{
+    float: left;
+    width: 60px;
+    height: 40px;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: right;
+    color: $sc-color-copy;
+    background: $sc-color-theme-background-light;
+    outline: none;
+    border: 0px;
+}
+
+.item-views-cell-selectable-actionable-label-qty{
+	float: left;
+	margin-right: 15px;
+	line-height: 40px;
+}
+
+.item-views-cell-selectable-actionable-amount{
+	clear:both;
+	display:block;
+}
+
+.item-views-cell-selectable-actionable-edit-button{
+   @extend .split-button;
+}
+ 
+.item-views-cell-selectable-actionable-edit-button-edit{
+	@extend .button-tertiary;
+	@extend .button-small;
+	border-right:none;
+}
+
+.item-views-cell-selectable-actionable-edit-button-drop{
+	@extend .button-tertiary;
+	@extend .button-small;
+	i{
+		@extend .fa;
+		@extend %fa-angle-down;
+	}
+}
+
+.item-views-cell-selectable-actionable-edit-content{
+    @extend .split-button-dropdown;
+    display:none;
+}
+
+.item-views-cell-selectable-actionable-sku-text{
+	@extend .text-light;
+}
+
+.item-views-cell-selectable-actionable-input-checkbox{
+	@extend .input-checkbox;
+}
+
+.item-views-cell-selectable-actionable-options{}
+.item-views-cell-selectable-actionable-summary{}
+.item-views-cell-selectable-actionable-item{}
+.item-views-cell-selectable-actionable-alert-placeholder{}

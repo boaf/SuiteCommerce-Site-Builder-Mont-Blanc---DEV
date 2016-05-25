@@ -1,0 +1,125 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.quick-view-confirmation-modal {
+	@extend .row;
+}
+.quick-view-confirmation-modal-img {
+	@extend .col-sm-5;
+	margin-bottom: $sc-base-margin * 3;
+	
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: 0;
+	} 
+}
+.quick-view-confirmation-modal-details {
+	@extend .col-sm-7;
+	.item-view-stock-msg {
+		display: table;
+	}
+}
+.quick-view-confirmation-modal-full-details {
+	margin: $sc-base-margin 0 $sc-base-margin * 3;
+	display: block;
+}
+.quick-view-confirmation-modal-price {
+	@extend .cart-confirmation-modal-price;
+	
+	.item-views-price-lead {
+		@extend .large-price;
+	}
+}
+.quick-view-confirmation-modal-sku{
+	@extend .cart-confirmation-modal-sku;
+}
+.quick-view-confirmation-modal-quantity {
+	.item-details-options-quantity {
+		margin-top: 0;
+	}
+}
+.quick-view-confirmation-modal-actions {
+	margin: 0;
+}
+
+.quick-view-add-to-cart-help{
+	@extend .message-info;
+	margin-top: $sc-base-margin * 3;
+}
+
+.quick-view-quantity-help {
+	clear: both;
+	display: block;
+	font-weight:$sc-font-weight-light;
+	margin: $sc-base-margin * 2 0;
+}
+
+.quick-view-add-to-cart-help-icon{
+	@extend .fa;
+	@extend %fa-info-circle;
+	margin-right: $sc-base-margin;
+}
+
+.quick-view-confirmation-modal-add-to-cart{
+	@extend .cart-confirmation-modal-view-cart;
+	margin-top: $sc-base-margin * 3;
+}
+.quick-view-confirmation-modal-add-to-product-list {
+	@extend .cart-confirmation-modal-continue-shopping;
+	margin-top: $sc-base-margin * 3;
+	.product-list-control-button-wishlist {
+		margin-top: 0;
+	}
+}
+.quick-view-confirmation-modal-add-to-product-list .add-to-product-list-button {
+	@extend .add-to-product-list-button;
+	@extend .button-medium;
+}
+.quick-view-confirmation-modal-view-cart-button {
+	@extend .button-large;
+	@extend .button-primary;
+	width: 100%;
+}
+
+.quick-view-message-warning{
+	@extend .global-views-message;
+	@extend .global-views-message-warning;
+}
+
+.quick-view-button-quantity-remove{
+	@extend .item-details-quantity-remove;
+}
+
+.quick-view-options-quantity{
+	@extend .item-details-options-quantity;
+}
+
+.quick-view-options-quantity-title{
+	@extend .item-details-options-quantity-title;
+}
+
+.quick-view-quantity-value{
+	@extend .item-details-quantity-value;
+}
+
+.quick-view-options-container{
+	@extend .options-container;
+}
+
+.quick-view-button-quantity-add{
+	@extend .item-details-quantity-add;
+}
+
+.quick-view-confirmation-modal-sku-label{
+	@extend .sc-label-sku;
+}
+.quick-view-confirmation-modal-sku-value{
+	@extend .sc-value-sku;
+}
+.quick-view-confirmation-modal-item-name{}
+.quick-view-confirmation-modal-options{}
+.quick-view-add-to-cart-help-text{}
+.quick-view-add-to-cart-form{}

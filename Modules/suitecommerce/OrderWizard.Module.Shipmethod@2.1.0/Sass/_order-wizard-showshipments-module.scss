@@ -1,0 +1,75 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.order-wizard-showshipments-module-container{
+	@extend .box-column;
+}
+
+.order-wizard-showshipments-module-shipping-address{
+	@extend .col-xs-12;
+	@extend .col-sm-6;
+}
+
+.order-wizard-showshipments-module-shipping-method{
+	@extend .col-xs-12;
+	@extend .col-sm-6;
+}
+.order-wizard-showshipments-module-shipping-details{
+	@extend .box-column;
+}
+
+.order-wizard-showshipments-module-shipping-details-body {
+	@extend .row;
+}
+.order-wizard-showshipments-module-shipping-details-address,
+.order-wizard-showshipments-module-shipping-details-method {
+	@extend .col-sm-6;
+}
+.order-wizard-showshipments-module-shipping-details-address {
+	margin-bottom: $sc-medium-margin;
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: 0;
+	}
+	.address-details-info {
+		margin-bottom: 0;
+	}
+}
+.order-wizard-showshipments-module-shipping-details-method {
+	.order-wizard-showshipments-module-shipping-details-method-info-card {
+		min-height: inherit;
+	}
+}
+.order-wizard-showshipments-module-shipping-details-address-link {
+	margin-top: $sc-base-margin * 3;
+	margin-bottom: $sc-base-margin * 3;
+	display: inline-block;
+	@media (min-width: $screen-md-min) {
+		margin-bottom: 0;
+	}
+}
+.order-wizard-showshipments-module-shipping-title {
+	margin-bottom: $sc-medium-margin;
+}
+
+.order-wizard-showshipments-module-edit-cart-link{
+
+	display: block;	
+	padding: $sc-base-padding * 3 $sc-base-padding * 4;
+	margin: - $sc-base-margin * 4;
+	margin-bottom:$sc-base-margin * 3;
+	border-bottom:1px solid $sc-color-theme-background;
+}
+
+.order-wizard-showshipments-module-shipping-options{
+	@extend .input-generic;
+}
+.order-wizard-showshipments-module-shipping-details-method-info-card {
+	@extend .info-card;
+}
+.order-wizard-showshipments-module-shipmethod-rate{}
+.order-wizard-showshipments-module-shipmethod-name{}
+

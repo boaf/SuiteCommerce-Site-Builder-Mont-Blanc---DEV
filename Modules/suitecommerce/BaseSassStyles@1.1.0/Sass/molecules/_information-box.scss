@@ -1,0 +1,29 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.information-box {
+	width: 100%;
+	border: 1px solid $sc-color-theme-border;
+	background-color: #ffffff;
+}
+
+.information-box-body {
+	padding: $sc-base-padding * 3;
+	@media (min-width: $screen-sm-min) {
+		padding: $sc-base-padding * 4;
+	}
+}
+
+.information-box-summary {
+	padding: $sc-base-padding * 2 $sc-base-padding * 3;
+	border-top: 1px solid $sc-color-theme-border;
+	background-color: $sc-color-theme-background-lightest;
+	
+	@media (min-width: $screen-sm-min) {
+		padding: $sc-base-padding * 2 $sc-base-padding * 4;
+	}
+}

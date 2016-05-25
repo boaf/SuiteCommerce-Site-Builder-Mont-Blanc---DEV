@@ -1,0 +1,63 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.order-history-fulfillment-header{
+	padding-bottom:$sc-base-padding * 3;
+	margin-bottom:$sc-medium-margin;
+	border-bottom:1px solid $sc-color-theme-border;
+	margin-left:-$sc-base-margin * 4;
+	margin-right:-$sc-base-margin * 4;
+}
+
+.order-history-fulfillment-header-container{
+	padding:0 $sc-base-padding * 4;
+}
+
+.order-history-fulfillment-delivery-label{
+	@extend .sc-label;
+}
+
+.order-history-fulfillment-delivery-value{
+	@extend .sc-value;
+}
+
+.order-history-fulfillment-shipped-date-label{
+	@extend .sc-label;
+}
+.order-history-fulfillment-shipped-date-value{
+	@extend .sc-value;
+}
+
+.order-history-fulfillment-shipped-status-value{
+	@extend .sc-value;
+}
+.order-history-fulfillment-shipped-status-label{
+	@extend .sc-label;
+}
+
+
+
+.order-history-fulfillment-items-table{
+	@extend .item-views-cell-actionable-table;
+	@extend .table-row-with-border;
+
+	.item-view-actionable-selected-option-cell {
+		padding-left: 0;
+	}
+}
+
+.order-history-fulfillment-container {
+	border-bottom:1px solid $sc-color-theme-border;
+	margin-bottom:$sc-base-margin *3;
+}
+
+.order-history-fulfillment-container:last-child {
+		border-bottom:0;
+}
+
+.order-history-fulfillment-header-col{}
+.order-history-fulfillment-body{}

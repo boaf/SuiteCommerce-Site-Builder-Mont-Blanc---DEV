@@ -1,0 +1,35 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+//sizing
+$sc-base-font-size: 15px;
+$sc-smallest-font-size: 11px;
+$sc-small-font-size: 13px;
+$sc-h1-font-size: 26px;
+$sc-h1-font-size-mobile: 22px;
+$sc-h2-font-size: 22px;
+$sc-h2-font-size-mobile: 18px;
+$sc-h3-font-size: 22px;
+$sc-h3-font-size-mobile: 18px;
+$sc-h4-font-size: 18px;
+$sc-h4-font-size-mobile: 15px;
+$sc-h5-font-size: $sc-base-font-size;
+$sc-button-large-font-size: $sc-base-font-size * 1.067;
+$sc-button-medium-font-size: $sc-base-font-size;
+$sc-button-small-font-size: $sc-small-font-size;
+
+$sc-navigation-icon-size: 25px;
+
+$sc-image-large-size:150px;
+$sc-image-medium-size:100px;
+$sc-image-small-size:60px;
+
+//weight
+$sc-font-weight-light:300;
+$sc-font-weight-normal:400;
+$sc-font-weight-semibold:600;
+$sc-font-weight-bold:700;

@@ -1,0 +1,33 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-option-color{
+	margin-bottom:$sc-small-margin;
+}
+
+.item-views-option-color-label{
+	text-transform:uppercase;
+	font-weight:$sc-font-weight-bold;
+	margin-bottom:$sc-small-margin;
+	span{
+		font-weight:$sc-font-weight-normal;
+	}
+}
+
+.item-views-option-color-tiles-container{
+	@extend .color-picker-lg;
+	clear:both;
+}
+
+.facets-facet-browse-items .item-views-option-color-tiles-container {
+	@extend .color-picker-sm;
+}
+
+.facets-facet-browse-items .item-views-option-color-label {
+	display: none;
+}
+

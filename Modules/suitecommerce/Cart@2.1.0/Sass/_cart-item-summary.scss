@@ -1,0 +1,95 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.cart-item-summary-item-list-actionable-qty{
+	@extend .item-views-cell-actionable-qty;
+}
+
+.cart-item-summary-item-list-actionable-qty-form{
+	@extend .item-views-cell-actionable-qty-form;
+}
+
+.cart-item-summary-item-list-actionable-container-qty {
+	margin-bottom: 10px;
+	
+	.cart-item-summary-item-list-actionable-label-qty {
+		
+		display: block;
+		vertical-align: middle;
+		color: $sc-color-dark-copy;
+		margin-bottom:$sc-small-margin;
+		font-weight: 600;
+
+		@media (min-width: $screen-md-min) {
+			display: table-cell;
+		}
+	}
+	.cart-item-summary-item-list-actionable-input-qty {
+		
+		display: block;
+		vertical-align: middle;
+		overflow: hidden;
+		@media (min-width: $screen-md-min) {
+				display: table-cell;;
+				padding-left: 20px;
+		}
+	}
+}
+
+.cart-item-summary-item-list-actionable-label-qty{
+	@extend .item-views-cell-actionable-label-qty;
+}
+
+.cart-item-summary-item-list-actionable-input-qty{
+	@extend .item-views-cell-actionable-input-qty;
+}
+
+.cart-item-summary-item-list-actionable-amount{
+	@extend .item-views-cell-actionable-amount;
+}
+
+.cart-item-summary-item-list-actionable-amount-label{
+	@extend .item-views-cell-actionable-amount-label;
+}
+
+.cart-item-summary-item-view-old-price{
+	@extend .item-views-price-old;
+}
+
+.cart-item-summary-amount-value{
+	@extend .amount-value;
+}
+
+.cart-item-summary-quantity-title-help{
+	clear: both;
+	margin-top: $sc-base-margin;
+	display: block;
+	font-weight:$sc-font-weight-light;
+}
+
+.cart-item-summary-quantity-add, .cart-item-summary-quantity-remove{
+	@extend .button-secondary;
+	background-color:lighten($sc-color-theme, 20%);
+	border:1px solid lighten($sc-color-theme, 20%);;
+	width: $sc-target-size-mobile;
+	height: $sc-target-size-mobile;
+	float: left;
+
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}
+}
+
+.cart-item-summary-quantity-value {
+ 	padding:$sc-base-margin * 2 $sc-base-padding * 3 $sc-base-margin * 2 $sc-base-padding * 3;
+ 	width: 90px;
+ 	text-align: right;
+	background-color: #ebf1f4;
+	border: 0;
+	-webkit-border-radius: 0 0 0 0;
+	border-radius: 0 0 0 0;
+}

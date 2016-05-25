@@ -1,0 +1,120 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.order-history-list-button-back {
+	@extend .button-back;
+}
+.order-history-list-header {
+	border-top: 1px solid $sc-color-theme-border;	
+	padding: $sc-base-padding * 3 0;
+}
+.order-history-list-button-back-icon {
+	@extend .button-back-icon;
+}
+.order-history-list-empty {
+	@extend .list-empty;
+}
+
+.order-history-list-recordviews-container{
+	@extend .recordviews-container;
+
+	@media (min-width: $screen-md-min) {
+	.recordviews-actionable-title-header,
+	.recordviews-actionable-title {
+		width: 20%;
+	}
+	.recordviews-actionable-origin-header,
+	.recordviews-actionable-origin {
+		width: 15%;
+		text-align: left;
+	}
+	.recordviews-actionable-date-header,
+	.recordviews-actionable-date {
+		width: 15%;
+		text-align: right;
+	}
+	.recordviews-actionable-currency-header,
+	.recordviews-actionable-currency {
+		width: 20%;
+		text-align: right;
+	}
+	.recordviews-actionable-status-header,
+	.recordviews-actionable-status {
+		width: 25%;
+		text-align: left;
+	}
+	.recordviews-actionable-actions-header,
+	.recordviews-actionable-actions {
+		width: 30%;
+		text-align: right;
+	}
+}
+}
+
+.order-history-list-recordviews-actionable-table {
+	@extend .recordviews-actionable-table;
+
+	.recordviews-actionable-origin {
+		padding-bottom:0px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.recordviews-actionable-origin {
+			padding-bottom:$sc-base-padding * 3;
+		}
+	}
+}
+
+.order-history-list-recordviews-actionable-header{
+	@extend .recordviews-actionable-header;
+}
+
+.order-history-list-recordviews-actionable-title-header{
+	@extend .recordviews-actionable-title-header;
+}
+
+.order-history-list-recordviews-actionable-date-header{
+	@extend .recordviews-actionable-date-header;
+}
+
+.order-history-list-recordviews-actionable-currency-header{
+	@extend .recordviews-actionable-currency-header;
+}
+
+.order-history-list-recordviews-actionable-status-header{
+	@extend .recordviews-actionable-status-header;
+}
+
+.order-history-list-recordviews-actionable-actions-header{
+	@extend .recordviews-actionable-actions-header;
+}
+
+.order-history-list-case-list-paginator{
+	@extend .case-list-paginator;
+}
+
+.order-history-list-recordviews-actionable-origin-header {
+	@extend .recordviews-actionable-origin-header;
+}
+.order-history-list-open-list-header-nav {
+	@extend .invoice-open-list-header-nav;
+}
+.order-history-list-open-list-header-button-group {
+	@extend .invoice-open-list-header-button-group;
+}
+.order-history-list-open-list-header-button-open {
+	@extend .invoice-open-list-header-button-open;
+}
+.order-history-list-open-list-header-button-all {
+	@extend .invoice-open-list-header-button-paid;
+}
+.order-history-list{}
+
+.order-history-list-empty-section {
+	padding:$sc-base-padding * 8 $sc-base-padding * 3 $sc-base-padding * 3 $sc-base-padding * 3;
+ 	text-align:center;
+}

@@ -1,0 +1,223 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-cell-actionable-expanded{
+	display:block;
+	clear:both;
+	&:hover{
+		background:none;
+	}
+}
+
+.item-views-cell-actionable-expanded-image{
+	@extend .col-xs-3;
+	@extend .col-sm-3;
+}
+
+.item-views-cell-actionable-expanded-details{
+	@extend .col-xs-9;
+	@extend .col-sm-6;
+}
+
+.item-views-cell-actionable-expanded-actions{
+	@extend .col-xs-offset-3;
+	@extend .col-xs-9;
+	@extend .col-sm-offset-0;
+	@extend .col-sm-3;
+}
+
+.item-views-cell-actionable-expanded-name{
+	margin-bottom:$sc-small-margin;
+}
+
+.item-views-cell-actionable-expanded-name-link{
+	@extend .medium-title-navigable;
+}
+
+.item-views-cell-actionable-expanded-name-viewonly{
+	@extend .medium-title-viewonly;
+}
+
+.item-views-cell-actionable-expanded-thumbnail{
+	img{
+		width:$img-large;
+	}
+}
+
+.item-views-cell-actionable-expanded-price{
+	margin-bottom:$sc-small-margin;
+}
+
+.item-views-cell-actionable-expanded-price .item-views-price-lead{
+	@extend .middle-price;
+}
+
+.item-views-cell-actionable-expanded-sku{
+	font-size:$sc-small-font-size;
+}
+
+.item-views-cell-actionable-qty{
+	clear:both;
+	display:block;
+	width:100%;
+	font-size:$sc-base-font-size;
+}
+
+.item-views-cell-actionable-expanded-qty input[type=number]{
+    float: left;
+    width: 60px;
+    height: 40px;
+    padding: 0;
+    padding-right: $sc-base-padding;
+    text-transform: uppercase;
+    text-align: right;
+    color: $sc-color-copy;
+    background: $sc-color-theme-background-light;
+    outline: none;
+    border: 0px;
+}
+
+.item-views-cell-actionable-expanded-label-qty{
+	@extend .sc-label;
+	display: block;
+	margin-right: 15px;
+	line-height: 1.2;
+	overflow:hidden;
+	margin-top:$sc-base-margin;
+	margin-bottom:$sc-base-margin;
+}
+
+.item-views-cell-actionable-expanded-input-qty{
+	display:block;
+	margin-bottom:$sc-small-margin;
+	overflow:hidden;
+}
+
+.item-views-cell-actionable-expanded-sku{
+	color:$sc-color-theme;
+}
+
+.item-views-cell-actionable-expanded-details{
+	.cart-option{
+	margin-bottom:$sc-base-margin;	
+	}
+}
+
+.item-views-cell-actionable-expanded-options{
+	.cart-option{
+		font-size:$sc-base-font-size;
+	}
+}
+
+.item-views-cell-actionable-expanded-amount{
+	clear:both;
+	display:block;
+	font-size:$sc-base-font-size;
+	margin-bottom:$sc-medium-margin;
+	@media (min-width: $screen-sm-min){
+		margin-bottom:0px;
+	}
+		
+}
+
+.item-views-cell-actionable-expanded-amount-label{
+	@extend .sc-label;
+}
+
+.item-views-cell-actionable-expanded-edit-button{
+   @extend .split-button;
+    @media (min-width: $screen-sm-min){
+		 position:absolute;
+	}
+}
+ 
+.item-views-cell-actionable-expanded-edit-button-edit{
+	@extend .button-tertiary;
+	@extend .button-small;
+	border-right:none;
+}
+
+.item-views-cell-actionable-expanded-edit-button-drop{
+	@extend .button-tertiary;
+	@extend .button-small;
+	i{
+		@extend .fa;
+		@extend %fa-angle-down;
+	}
+}
+
+.item-views-cell-actionable-expanded-edit-content{
+    @extend .split-button-dropdown;
+    @extend .dropdown-menu;
+    //position:relative;
+    display:none;
+    padding:$sc-base-padding * 3;
+     @media (min-width: $screen-sm-min){
+		 left:-65px;
+	}
+	li{
+		margin-bottom:$sc-base-margin;
+	}
+	li:last-child{
+		margin-bottom:0;
+	}
+    li a{
+    	margin:0px;
+    	padding:0px;
+    	line-height:1.2;
+    	cursor:pointer;
+    	cursor:hand;
+    	color:$sc-color-link;
+    	&:hover{
+    		color:$sc-color-link-hover;
+   			text-decoration:none;
+   			background:none;
+   		}
+    }
+}
+
+.item-views-cell-actionable-expanded-table{
+	@extend .table-flex-item-actionable;
+	table-layout: fixed;
+}
+
+.item-views-cell-actionable-expanded-table td{
+	padding-left:$sc-base-padding * 3;
+	padding-right:$sc-base-padding * 3;
+	vertical-align:top;
+}
+
+.item-views-cell-actionable-expanded-table-first{
+	 @extend .table-flex-tdfirst;
+	 width:25%;
+}
+
+.item-views-cell-actionable-expanded-table-middle {
+	@extend .table-flex-middle;
+}
+
+.item-views-cell-actionable-expanded-table-last{
+	 @extend .table-flex-tdlast;
+	 vertical-align:top;
+	 @media (min-width: $screen-sm-min){
+		width:25%;
+	}
+}
+.item-views-cell-actionable-expanded-alert-placeholder{
+	margin:$sc-base-margin * 2 0;
+}
+
+.item-views-cell-actionable-expanded-sku-label{
+	@extend .sc-label-sku;
+}
+
+.item-views-cell-actionable-expanded-sku-value{
+	@extend .sc-value-sku;
+}
+.item-views-cell-actionable-expanded-stock{}
+.item-views-cell-actionable-expanded-summary{}
+.item-views-cell-actionable-expanded-line-tr{}

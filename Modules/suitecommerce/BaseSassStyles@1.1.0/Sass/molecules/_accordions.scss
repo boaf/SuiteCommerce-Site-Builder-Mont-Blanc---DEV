@@ -1,0 +1,59 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Accordion
+//
+// Markup:
+// <div class="accordion-head">
+// 	<a class="accordion-head-toggle" data-toggle="collapse" data-target="#accordion-id" aria-expanded="false" aria-controls="accordion-id">
+// 		this is the accordion
+// 		<i class="acordion-head-toggle-icon"></i>
+// 	</a>
+// </div>
+// <div class="accordion-body in" id="accordion-id">
+// 	<h3>this is the exapandible content</h3>
+// 	<p> some content</p>
+// 	<p> more content</p>
+// </div>
+// 
+// Styleguide 11.1
+
+.accordion-head{
+	@extend .small-title;
+	text-transform: inherit;
+}
+
+.accordion-divider {
+	margin-bottom:$sc-medium-margin;
+}
+
+.accordion-head-toggle{
+	display: block;
+	cursor:pointer;
+	background-color: $sc-color-theme-background;
+	height: 100%;
+	line-height: $sc-target-size;
+	padding: 0 $sc-base-padding * 4;
+}
+
+.accordion-head-toggle:hover{
+	text-decoration:none;
+}
+
+.acordion-head-toggle-icon{
+	@extend .fa;
+	@extend %fa-angle-up;
+	float:right;
+	font-size:$sc-h2-font-size;
+	height: $sc-target-size;
+	line-height: $sc-target-size;
+	@include transition (transform $sc-animation-base-duration ease)
+}
+
+.collapsed .acordion-head-toggle-icon{
+	@include rotate(180deg); 
+}

@@ -1,0 +1,90 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.merchandizing-zone {
+	@extend .col-md-12;
+	@extend .row;
+
+	p{
+		text-align: center;
+	}
+	
+	.bx-controls{
+		display: none;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.bx-controls{
+			margin-top: $sc-base-margin * 7;
+			text-align: right;
+			display: block;
+		}
+	}
+
+	.bx-prev, .bx-next{
+		color:$sc-color-theme;
+		padding: 8px $sc-base-padding * 4;
+		border: 1px solid $sc-color-theme;
+		margin: $sc-base-margin * 3 $sc-base-margin;
+		display: inline-block;
+	}
+	.bx-prev:hover, .bx-next:hover{
+		color:$sc-color-tertiary;
+		background: $sc-color-theme;
+		text-decoration: none;
+	}
+}
+
+.merchandizing-zone-title {
+	margin: 0 0 $sc-base-margin * 6;
+}
+
+.merchandizing-zone-next-icon{
+	@extend .fa;
+	@extend %fa-angle-right;
+	margin-left: $sc-base-margin;
+}
+
+.merchandizing-zone-prev-icon{
+	@extend .fa;
+	@extend %fa-angle-left;
+	margin-right: $sc-base-margin;
+}
+
+.item-cell-main-image {
+    margin:0 auto;
+    width: $img-large;
+}
+.item-cell-main-product{
+    text-align:center;
+    margin:$sc-base-margin * 2 0px $sc-base-margin 0px;
+    a{  
+		color:$sc-color-dark-copy;
+		font-size:$sc-base-font-size;
+    }
+}
+.item-cell-main-price{
+    color:$sc-color-link;
+    text-align:center;
+}
+.item-cell-rate{
+    text-align:center;
+    margin-top:- $sc-base-padding;
+
+    .rate-filled{
+        @extend .fa;
+        @extend %fa-star;
+        color:$sc-color-star-filled;
+        float:none;
+    }
+    .rate-empty{
+        @extend .fa;
+        @extend %fa-star;
+        color:$sc-color-star-empty;
+        float:none;
+    }
+}  

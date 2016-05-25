@@ -1,0 +1,37 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Login form
+//
+// Markup:
+// <div class="forms-row">
+// 	<label class="input-label"> Email Address <span class="input-required">(required)</span></label>
+// 	<input class="input-large" placeholder="user@domain" type="text">
+// </div>
+// <div class="forms-row">
+// 	<label class="input-label"> Password <span class="input-required">(required)</span></label>
+// 	<input class="input-large input-password" type="password">
+// </div>
+// <div class="forms-row">
+// 	<button class="button-sign-in">Sign In</button>  <a href="#" class="link-forgot-password">Forgot Password?</a>
+// </div>
+// 
+// Styleguide 11.4
+
+.button-sign-in{
+	@extend .button-primary;
+	@extend .button-large;
+}
+
+.link-forgot-password{
+	margin-left:$sc-base-margin * 3;
+}
+
+.forms-row{
+	@extend .row;
+	padding:$sc-base-padding $sc-base-padding * 3;
+}

@@ -1,0 +1,85 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.order-history-return-authorization {
+	border-bottom: 1px solid $sc-color-theme-border;
+	padding-bottom:$sc-base-padding *3;
+	margin-bottom:$sc-base-margin *3;
+}
+
+.order-history-return-authorization:last-child{
+	border-bottom: 0;
+	padding-bottom:$sc-base-padding *3;
+	margin-bottom:0;
+}
+
+.order-history-return-authorization-table {
+	@extend .table-flex-item-navigable;
+	
+	.item-views-cell-navigable-item-unit-price-label,
+	.item-views-cell-navigable-item-quantity-label,
+	.item-views-cell-navigable-item-amount-label{
+		display:inline-block;
+		float: left;
+		margin-right:$sc-base-margin;
+	}
+
+	.item-views-cell-navigable-item-quantity-value{
+		text-align:left;
+	}
+
+	.item-views-cell-navigable-item-quantity,
+	.item-views-cell-navigable-item-unit-price,
+	.item-views-cell-navigable-amount {
+		text-align:left;
+	}
+
+}
+
+.order-history-return-authorization-table-head{
+	display:none;
+}
+
+.order-history-return-authorization-table-header,
+.order-history-return-authorization-table-header-quantity,
+.order-history-return-authorization-table-header-unit-price,
+.order-history-return-authorization-table-header-amount{
+	@extend .sc-label;
+	
+	font-weight: $sc-font-weight-normal;
+	padding-bottom: $sc-base-padding * 2;
+	border-bottom: 1px solid $sc-color-theme-border;
+	display: none;
+}
+
+.order-history-return-authorization-table-header-quantity,
+.order-history-return-authorization-table-header-unit-price,
+.order-history-return-authorization-table-header-amount{
+	text-align: right;
+}
+
+.order-history-return-authorization-header{
+	margin-bottom:$sc-base-margin *3;
+	border-bottom: 1px solid $sc-color-theme-border;
+	padding-bottom:$sc-base-padding *3;
+}
+
+.order-history-return-authorization-status-label{
+	@extend .sc-label;
+	margin-right:$sc-base-margin;
+}
+
+.order-history-return-authorization-number-label{
+	@extend .sc-label;	
+}
+
+.order-history-return-authorization-status-value{
+	@extend .sc-value;
+}
+
+.order-history-return-authorization-id{}
+.order-history-return-authorization-status-id-link{}

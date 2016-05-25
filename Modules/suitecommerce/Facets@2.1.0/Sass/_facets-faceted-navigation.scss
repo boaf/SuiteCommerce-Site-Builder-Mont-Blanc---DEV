@@ -1,0 +1,114 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.facets-faceted-navigation-results{
+	padding-top: $sc-base-padding * 4;
+	padding-left: $sc-base-padding * 3;
+	padding-right: $sc-base-padding * 3;
+
+	font-size: $sc-base-font-size;
+
+	@media (min-width: $screen-lg-min){
+		display: none;
+	}
+}
+
+.facets-faceted-navigation-title-alt {
+	color: $sc-color-primary;
+}
+
+.facets-faceted-navigation-facet-group {
+	padding: $sc-base-padding * 2 $sc-base-padding * 3;
+}
+
+.facets-faceted-navigation-title {
+	display: none;
+
+	@media (min-width: $screen-md-min) {
+		font-size: $sc-h3-font-size;
+		font-weight: $sc-font-weight-semibold;
+		text-align: left;
+		line-height: 66px;
+		display: block;
+		padding: $sc-base-padding * 3;
+	}
+}
+
+.facets-faceted-navigation-category-wrapper {}
+
+.facets-faceted-navigation-facets-clear {
+	@extend .button-tertiary;
+	@extend .button-small;
+	width: initial;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: $sc-medium-margin;
+
+	@media (min-width: $screen-md-min) {
+		position: initial;
+		display: inline-block;
+		margin-left: $sc-base-margin * 3;
+	}
+}
+
+.facets-faceted-navigation-facets-clear-icon {
+	@extend .facets-faceted-navigation-facet-option-circle;
+}
+.facets-faceted-navigation-facet-group-expander:hover {
+	text-decoration: none;
+}
+
+.facets-faceted-navigation-facet-group-title {
+	font-size: $sc-base-font-size;
+}
+
+.facets-faceted-navigation-facet-group-expander {
+	display:block;
+	padding: $sc-base-padding * 2 0;
+}
+
+.facets-faceted-navigation-facet-group-expander-icon {
+	float: right;
+	color: $sc-color-copy;
+	font-size: $sc-navigation-icon-size;
+	margin-top: -3px;
+	@extend .icon-angle-up;
+	@include transition-transform(300ms ease);
+}
+
+.collapsed .facets-faceted-navigation-facet-group-expander-icon{
+	@include rotate(180deg);
+}
+
+.facets-faceted-navigation-facet-option {
+	@extend small;
+	color: $sc-color-copy;
+	padding: $sc-base-padding * 2 0;
+	display: block;
+}
+
+.facets-faceted-navigation-facet-option:hover {
+	text-decoration: none;
+}
+
+.facets-faceted-navigation-facet-option.option-active {
+	color: $sc-color-theme-light
+}
+
+.facets-faceted-navigation-facet-option-circle {
+	@extend .icon-base;
+	@extend %fa-times-circle;
+	color: $sc-color-theme-light;
+	margin-left: $sc-base-margin;
+	cursor: pointer;
+}
+
+
+.facets-faceted-navigation-content .sc-pusher-header{
+	margin:0;
+}

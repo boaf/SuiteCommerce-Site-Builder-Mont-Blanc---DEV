@@ -1,0 +1,121 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+
+.item-views-cell-navigable-actionable{
+	@extend .table-flex-item-navigable;
+	margin:$sc-base-margin * 2 0;
+}
+
+.item-views-cell-navigable-actionable-item-image{
+	@extend .table-flex-tdfirst;
+	@extend .column-type-image;
+	img{
+		width:100%;
+	}
+}
+
+.item-views-cell-navigable-actionable-details {
+	@extend .table-flex-middle-first;
+	@extend .table-flex-middle-data;
+}
+
+.item-views-cell-navigable-actionable-amount {
+	@extend .table-flex-middle-last;
+	@extend .table-flex-middle-data;
+}
+
+.item-views-cell-navigable-actionable-value{
+	@extend .sc-value;
+}
+
+.item-views-cell-navigable-actionable-sku-label,
+.item-views-cell-navigable-actionable-sku-value{
+	@extend .sku;
+}
+.item-views-cell-navigable-actionable-product-price-label {
+	@extend .sc-label;
+}
+.item-views-cell-navigable-actionable-product-price-value {
+	@extend .sc-value;	
+}
+.item-views-cell-navigable-actionable-item-unit-price {
+	@extend .table-flex-middle-data;
+	@extend .column-type-amount;
+}
+
+.item-views-cell-navigable-actionable-item-unit-price-value{
+	@extend .sc-value;
+}
+
+.item-views-cell-navigable-actionable-item-unit-price-label{
+	@extend .sc-label;
+}
+
+.item-views-cell-navigable-actionable-item-quantity-label{
+	@extend .sc-label;
+}
+
+.item-views-cell-navigable-actionable-item-quantity{
+	@extend .sc-value;
+	@extend .table-flex-middle-data;
+}
+
+.item-views-cell-navigable-actionable-item-totalprice-label{
+	@extend .sc-label;
+}
+
+.item-views-cell-navigable-actionable-item-amount-label{
+	@extend .sc-label;
+}
+
+.item-views-cell-navigable-actionable-item-amount-value{
+	@extend .middle-price;
+}
+
+.item-views-cell-navigable-actionable-item-old-price{
+	@extend .old-price;
+}
+
+.item-views-cell-navigable-actionable-product-title{
+	@extend .medium-title;
+}
+
+.item-views-cell-navigable-actionable-product-title-anchor{
+	@extend .medium-title-navigable;
+}
+
+.item-views-cell-navigable-actionable-amount{
+	@extend .column-type-amount;
+	@extend .table-flex-middle-data;
+	@extend .table-flex-middle-last;
+	padding-bottom: $sc-base-padding * 3;
+}
+
+.item-views-cell-navigable-actionable-item-quantity-label,
+.item-views-cell-navigable-actionable-item-unit-price-label,
+.item-views-cell-navigable-actionable-item-amount-label{
+	@media (min-width: $screen-md-min){
+		display: none;
+	}
+}
+
+.item-views-cell-navigable-actionable-header-col-amount {
+	@extend .column-type-amount;
+	display:block;
+}
+
+.item-views-cell-navigable-actionable-product-name{}
+.item-views-cell-navigable-actionable-product-price{}
+.item-views-cell-navigable-actionable-item-quantity-value{
+	@extend .column-type-quantity;
+
+	@media (min-width: $screen-md-min){
+		display:block;
+	}
+}
+.item-views-cell-navigable-actionable-item-reason-value{}

@@ -1,0 +1,21 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-item-quantity-label{
+	@extend .sc-label;
+}
+.item-views-item-quantity-value{
+	@extend .sc-value;
+}
+
+.item-views-item-quantity-non-discounted-amount{
+	@extend .old-price;
+}
+
+.item-views-item-quantity-item-amount{
+	@extend .item-amount;
+}

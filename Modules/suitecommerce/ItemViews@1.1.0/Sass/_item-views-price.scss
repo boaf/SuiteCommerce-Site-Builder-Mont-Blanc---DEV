@@ -1,0 +1,30 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-price-lead{
+	@extend .middle-price;
+}
+
+.item-views-price-old{
+	@extend .old-price;
+}
+
+.item-views-price-login-to-see-prices-highlighted {
+	margin-top: $sc-base-margin * 2;
+    margin-bottom: $sc-base-margin * 2;
+}
+.item-views-price-login-to-see-prices {
+    @extend .message;
+}
+
+.item-views-price-message {
+	font-weight: normal;
+}
+
+.item-views-price{}
+.item-views-price-range{}
+.item-views-price-exact{}

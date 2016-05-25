@@ -1,0 +1,61 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.reorder-items-list-button-back {
+	@extend .button-back;
+}
+
+.reorder-items-list-button-back-icon {
+	@extend .button-back-icon;
+}
+
+.reorder-items-list-hedaer {
+	border-top: 1px solid $sc-color-theme-border;	
+	padding: $sc-base-padding * 3 0;	
+}
+
+.reorder-items-list .item-views-cell-actionable-options {
+	@media (min-width: $screen-sm-min){
+		margin-bottom:$sc-small-margin;
+	}
+}
+
+.reorder-items-list .list-header-view-filters {
+	padding: 0;
+}
+.reorder-items-list	.item-views-cell-actionable-table{
+	border-bottom: 1px solid $sc-color-theme-border;
+	@extend .table-row-with-border;
+}
+
+
+.reorder-items-actions-quantity{
+	clear:both;
+	display: block;
+	overflow: hidden;
+	margin-bottom:$sc-small-margin;
+}
+
+.reorder-items-list-empty {
+	@extend .list-empty;
+}
+
+
+.reorder-items-list-reorder-items-table{
+	@extend .item-views-cell-actionable-table;
+}
+
+.reorder-items-list-paginator{
+	@extend .case-list-paginator;
+}
+
+.reorder-items-list-empty-button{}
+
+.reorder-items-list-empty-section {
+	padding:$sc-base-padding * 8 $sc-base-padding * 3 $sc-base-padding * 3 $sc-base-padding * 3;
+ 	text-align:center;
+}

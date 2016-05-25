@@ -1,0 +1,90 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Tabs
+//
+// Markup:
+// <div role="tabpanel">
+//   <!-- Nav tabs -->
+//   <ul class="tabpanel-head" role="tablist">
+//   <li role="presentation" class="active"><a class="tabpanel-head-tab" href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+//     <li role="presentation"><a class="tabpanel-head-tab" href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+//     <li role="presentation"><a class="tabpanel-head-tab" href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+//     <li role="presentation"><a class="tabpanel-head-tab" href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+//   </ul>
+//   <!-- Tab panes -->
+//   <div class="tabpanel-body">
+//     <div role="tabpanel" class="tabpanel-tab active" id="home">
+//       <h2>Features</h2>
+//       <p>
+//         Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Mauris blandit <b>aliquet elit</b>, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus.
+//       </p>
+//       <p>
+//         <b>Vestibulum ac diam sit:</b>
+//       </p>
+//       <p>
+//       </p><ul>
+//       <li>Amet quam vehicula elementum . </li>
+//       <li>100% Proin eget tortor risus. </li>
+//       <li>22” blandit aliquet elit.</li>
+//       <li>list 4</li>
+//     </ul>
+//     <p></p>
+//     <p>
+//       Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit. Eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum... read more.
+//     </p>
+//   </div>
+//   <div role="tabpanel" class="tabpanel-tab" id="profile">
+//    <h2>profile</h2>
+//  </div>
+//  <div role="tabpanel" class="tabpanel-tab" id="messages">
+//    <h2>messages</h2>
+//  </div>
+//  <div role="tabpanel" class="tabpanel-tab" id="settings">
+//    <h2>settings</h2>
+//  </div>
+// </div>
+// </div>
+// 
+// Styleguide 11.6
+
+.tabpanel-tab{
+	display:none;
+
+	&.active{
+		display: block;
+	}
+}
+
+.tabpanel-head{
+	@include clearfix;
+}
+
+.tabpanel-head li{
+	float:left;
+	margin-right:2px;
+	
+	background-color:$sc-color-theme-background;
+	&.active{
+		background-color:$sc-color-theme-background-light;
+	}
+}
+
+.tabpanel-head-tab{
+	@extend .nav-menu-category;
+	font-weight: $sc-font-weight-semibold;
+	display:block;
+	padding: $sc-base-padding * 2 $sc-base-padding * 5; 
+}
+
+
+
+.tabpanel-tab{
+	background-color: $sc-color-theme-background-light;
+	padding: $sc-base-padding * 5;
+}
+

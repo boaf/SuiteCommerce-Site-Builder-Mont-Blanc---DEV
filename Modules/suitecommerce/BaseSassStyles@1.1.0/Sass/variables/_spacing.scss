@@ -1,0 +1,19 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+$sc-base-padding:5px;
+$sc-base-margin:5px;
+
+$sc-small-margin:$sc-base-margin * 2;
+$sc-medium-margin:$sc-base-margin * 4;
+$sc-large-margin:$sc-base-margin * 8;
+$sc-xlarge-margin:$sc-base-margin * 12;
+
+$sc-padding-small: $sc-base-padding * 5 $sc-base-padding * 3;
+$sc-padding-medium: $sc-base-padding * 6;
+
+$button-safe-margin:$sc-base-margin * 2;

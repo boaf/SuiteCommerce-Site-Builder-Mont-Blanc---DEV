@@ -1,0 +1,68 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Summary box
+//
+// Markup:
+// refix new grid floating amoounts
+// Styleguide 11.5
+
+.summary-title{
+	background:$sc-color-theme-background;
+	text-align:center;
+	padding:$sc-base-padding * 4 0px $sc-base-padding * 4 0px;
+	margin-bottom:$sc-medium-margin;
+}
+
+.summary-container{
+	margin-bottom:$sc-medium-margin;
+	border:1px solid $sc-color-theme-background;
+	box-shadow:0px 3px 0px $sc-color-theme-background;
+	-moz-box-shadow:0px 3px 0px $sc-color-theme-background;
+	-webkit-box-shadow:0px 3px 0px $sc-color-theme-background;
+}
+
+.summary-subtotal{
+	font-weight:$sc-font-weight-bold;
+	text-transform:uppercase;
+}
+
+.summary-total{
+	font-size:$sc-h4-font-size;
+	font-weight:$sc-font-weight-bold;
+	text-transform:uppercase;
+}
+
+.summary-grid-right{
+	float:right;
+	padding-right:$sc-base-padding * 3;
+}
+
+.summary-grid-float{
+	@extend .row;
+	clear:both;
+	margin:0px;
+	margin-bottom:$sc-small-margin;
+	padding-left:$sc-base-padding * 3;
+}
+
+.summary-button-container{
+	text-align:center;
+	background:$sc-color-theme-background;
+	padding:$sc-base-padding * 4 0px;
+}
+
+
+.button-proceed-to-checkout{
+	@extend .button-primary;
+	@extend .button-large;
+}
+
+.button-apply{
+	@extend .button-secondary;
+	@extend .button-small;
+}

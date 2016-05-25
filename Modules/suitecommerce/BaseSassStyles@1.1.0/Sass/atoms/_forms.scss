@@ -1,0 +1,369 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+///////////////////////////////////////////////////////////////
+//fix for select to be displayed consistently across browsers
+select[class]{
+	@include angle-down-background($sc-color-theme);
+	@include appearance(none);
+	background-color:#fff;
+	padding-right: 30px;
+	background-repeat: no-repeat;
+	background-size: $sc-navigation-icon-size;
+	background-position: 100% 100%;
+	text-indent: 0.01px;
+  text-overflow: '';
+}
+
+select[disabled]{
+	@extend .input-state-disabled;
+}
+
+@media screen and (min-width:0\0) { 
+	//ie dont understand appearance on selects. so hide background.
+	select[class] {
+		background-image:none;
+		padding-right: $sc-base-padding * 2;
+	}
+}
+
+input[type="text"], 
+input[type="password"],
+input[type="email"],
+input[type="phone"],
+input[type="search"],
+input[type="number"]
+{
+	@include appearance(none);
+	@include placeholder {
+		color: $sc-color-placeholder;
+	}
+	@include border-radius(0);
+}
+
+input[type="checkbox"]{
+	margin-right: $sc-base-margin;
+}
+
+.control-group{
+	margin-top: $sc-medium-margin;
+}
+
+input[type="date"]
+{
+	-webkit-appearance: none;
+}
+
+input[type="date"]::-webkit-outer-spin-button, /* Removes arrows */
+input[type="date"]::-webkit-inner-spin-button, /* Removes arrows */
+input[type="date"]::-webkit-clear-button, /* Removes blue cross */
+input[type="date"]::-webkit-calendar-picker-indicator /* Removes arrow calendar */ { 
+  -webkit-appearance: none;
+  display: none;
+}
+// Labels 
+//
+// .input-label  	- Input Label
+// .input-required  - Input label required
+//
+// Markup: <label class="{$modifiers}">Label</label>
+// 
+// Styleguide 3.1
+
+
+.input-label{
+	display:inline-block;
+	margin-bottom:$sc-base-margin * 2;
+	font-size:$sc-base-font-size;
+	font-weight:$sc-font-weight-semibold;
+	color:$sc-color-dark-copy;
+}
+
+.input-required{
+	font-size:$sc-smallest-font-size;
+	color:$sc-color-primary;
+}
+.input-optional {
+	font-size: $sc-small-font-size;
+	color: $sc-color-secondary;
+}
+
+// Form Inputs
+//
+// .input-generic  		- Input Generic (width 100% fit column)
+// .input-large  		- Input Large
+// .input-medium		- Input Medium
+// .input-small			- Input Small
+//
+// Markup: <input class="{$modifiers}"/>
+// 
+// Styleguide 3.2
+
+.input-base{
+	padding:$sc-base-padding * 2;
+	display:block;
+	color:$sc-color-dark-copy;
+	font-size:$sc-base-font-size;
+	border:1px solid $sc-color-theme-light;
+	@include border-radius(0);
+}
+
+.input-generic {
+	@extend .input-base;
+	width:100%;
+}
+
+.input-large{
+	@extend .input-base;
+	width:100%;
+	margin-bottom:$sc-base-margin * 2;
+
+	@media(min-width: $screen-md-min){
+		min-width:300px;
+		width: auto;
+	}
+}
+
+.input-medium{
+	@extend .input-base;
+	min-width:200px;
+	margin-bottom:$sc-base-margin * 2;
+
+	@media(min-width: $screen-sm-min){
+		min-width:300px;
+	}
+}
+
+.input-small{
+	@extend .input-base;
+	min-width:80px;
+	margin-bottom:$sc-base-margin * 2;
+}
+
+.input-xsmall{
+	@extend .input-base;
+	width:100px;
+	margin-bottom:$sc-base-margin * 2;
+}
+
+.form-messages{
+	margin-top: $sc-medium-margin;
+
+	.global-views-message-error{
+		@extend .message-error;
+		margin-bottom: 0;
+	}
+
+	.global-views-message-button{
+		display: none;
+	}
+}
+
+
+// Input State Error
+//
+// Markup: <input class="input-large input-state-error"/>
+// 
+// Styleguide 3.3
+
+.input-state-error{
+	box-shadow:0px 0px 5px #b65d65;
+}
+
+// Input State Disable
+//
+// Markup: <input class="input-large input-state-disabled"/>
+// 
+// Styleguide 3.4
+
+.input-state-disabled{
+	border:1px solid $sc-color-theme-border;
+	background:$sc-color-theme-background;
+}
+
+// Input Type Password
+//
+// Markup: <input class="input-large" type="password"/>
+// 
+// Styleguide 3.5
+
+.input-password{
+	color:$sc-color-theme;
+}
+
+// Input Type Textarea
+//
+// Markup: <textarea class="input-textarea">Textarea</textarea>
+// 
+// Styleguide 3.6
+
+.input-textarea{
+	border:1px solid $sc-color-theme-light;
+	padding:$sc-base-margin * 2;
+	font-size:$sc-base-font-size;
+	min-width:280px;
+	color:$sc-color-dark-copy;
+	width:100%;
+	min-height: 105px;
+	@include appearance(none);
+	@include border-radius(0);
+
+	@media(min-width: $screen-sm-min){
+		width:auto;
+		min-width:300px;
+	}
+}
+
+// Input Type Checkbox
+//
+// Markup: <input class="input-checkbox" type="checkbox" />
+// 
+// Styleguide 3.7
+
+.input-checkbox{
+	border:1px solid $sc-color-theme-light;
+	color:$sc-color-dark-copy;
+	background:transparent;
+}
+
+// Help Text
+//
+// Markup: <p class="input-help"/> Example text after input </p>
+// 
+// Styleguide 3.8
+
+.input-help{
+	color:$sc-color-theme;
+	font-size:$sc-small-font-size;
+	margin-top:-$sc-base-margin;
+	margin-bottom:$sc-base-margin * 3;
+	display:block;
+}
+
+// Inside Button
+//
+// Markup:
+//<div class="input-icon-box">
+//			<input class="input-large" type="text" />
+//			<button class="input-inside-button"><i class="fa fa-globe input_inside_icon"></i></button>
+//</div>
+// 
+// Styleguide 3.10
+
+.input-icon-box{
+	position:relative;
+}
+
+.input-inside-button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	text-align: center;
+	pointer-events: none;
+	background:$sc-color-theme-background;
+	height:100%;
+	border:1px solid $sc-color-theme-light;
+	border-right:1px solid $sc-color-theme-border;
+	padding:0px $sc-base-padding * 2;
+}
+
+.input-inside-icon{
+	font-size:$sc-h2-font-size;
+	color:$sc-color-theme;
+}
+
+
+// Tooltip
+//
+// Markup: <i class="sc-tooltip" data-toggle="tooltip" data-placement="top" title="Default Tooltip"></i>
+// 
+// Styleguide 3.9
+
+
+.sc-tooltip{
+	@extend .fa;
+	@extend %fa-question-circle;
+	padding: $sc-base-padding*2 0 $sc-base-padding*2 $sc-base-padding/2; 
+	color:$sc-color-secondary;
+	cursor:pointer;
+}
+
+.tooltip.in{
+	opacity: 1;
+}
+
+.tooltip > .tooltip-inner {
+	background-color: $sc-color-theme-background;
+	padding:$sc-base-padding * 3 $sc-base-padding * 4;
+	color:$sc-color-secondary;
+	border:1px solid $sc-color-theme-border;
+	font-size:$sc-small-font-size;
+}
+
+.tooltip.top > .tooltip-arrow 
+{
+	border-top-color:$sc-color-theme-background;
+	border-width: 5px 5px 0;
+}
+.tooltip.right .tooltip-arrow {
+	border-right-color: $sc-color-theme-background;
+}
+// Popover
+//
+// Markup: <a href="#" data-toggle="popover" data-placement="bottom" data-trigger="hover" title="Popover title" data-content="imgs and other html content here">
+//	<i class="sc-tooltip"></i>
+//	</a>
+// 
+// Styleguide 3.9
+
+.popover{
+	border:1px solid $sc-color-theme-border;
+	color:$sc-color-secondary;
+	box-shadow:0px 1px 5px $sc-color-theme-background-light;
+}
+
+.popover-title {
+	background-color: $sc-color-theme-background;
+}
+.popover-content {
+	background-color: $sc-color-theme-background-light;
+	font-size:$sc-small-font-size;
+}
+
+//Select with icon
+.selector {
+	display:block;
+	margin:$sc-base-margin * 3;
+	float: left;
+	@media(min-width: $screen-md-min){
+		margin:0px;
+	}
+}
+.selector-select {
+	@extend .input-generic;
+	width:175px;
+	border:1px solid $sc-color-theme-border;
+	border-left:none;
+	height:$sc-target-size;
+	float:right;
+	@media(min-width: $screen-md-min){
+		width:233px;
+	}
+}
+.selector-icon {
+  width: 40px;
+  background: #e4eff5;
+  color: #5b7f8c;
+  font-size: 22px;
+  border: 1px solid #c7dde9;
+  border-right: none;
+  float: left;
+  line-height: 41px;
+  height: 44px;
+  text-align: center;
+}

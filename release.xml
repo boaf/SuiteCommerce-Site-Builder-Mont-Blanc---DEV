@@ -1,0 +1,22 @@
+<Bundle>
+  <param>
+    <name>SiteBuilder Extensions Mont Blanc</name>
+    <nslogin>psgreleasetest@netsuite.com</nslogin>
+    <nscompany>NetSuite Platform Solutions Group - SiteBuilder Extensions MontBlanc</nscompany>
+    <nsaccnt>4450224</nsaccnt>
+    <bundle_id>107017</bundle_id>
+    <qabundle_testfolder_id></qabundle_testfolder_id>
+    <prodcompany>NA</prodcompany>
+    <prodaccount>NA</prodaccount>
+    <prodbundle_id>NA</prodbundle_id>
+    <devaccnt>NA</devaccnt>
+    <devbundle_id>NA</devbundle_id>
+    <baselabel>SBE_MontBlanc</baselabel>
+    <version>Mont Blanc</version>
+    <datelabel>2016.02.16</datelabel>
+    <buildno>1</buildno>
+    <scrum>psgrelease-auto@netsuite.com</scrum>
+    <versioningmode>MINOR</versioningmode>
+    <qabundle_folder_id>NA</qabundle_folder_id>
+  </param>
+</Bundle>

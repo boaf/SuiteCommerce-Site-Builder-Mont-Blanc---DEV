@@ -1,0 +1,56 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+/* Item view cell NavigableActionable */
+
+.item-view-cell-navigable-actionable{
+	@extend .table-flex-item-navigable;
+	margin:$sc-base-margin * 2 0;
+}
+
+.item-view-cell-navigable-actionable-item-image{
+	width:25%;
+	text-align:center;
+	@extend .table-flex-tdfirst;
+	img{
+		width:$img-medium;
+	}
+}
+.item-view-cell-navigable-actionable-header-col-image{
+	width:25%;
+}
+
+.item-view-cell-navigable-actionable-label{
+	@extend .sc-label;
+}
+
+.item-view-cell-navigable-actionable-value{
+	@extend .sc-value;
+}
+
+.item-view-cell-navigable-actionable-item-totalprice-value{
+	@extend .sc-value;
+}
+.item-view-cell-navigable-actionable-item-quantity-label{
+	@extend .sc-label;
+}
+
+.item-view-cell-navigable-actionable-item-totalprice-label{
+	@extend .sc-label;
+}
+
+.item-view-cell-navigable-actionable-item-amount-label{
+	@extend .sc-label;
+}
+
+.item-view-cell-navigable-actionable-item-amount-value{
+	@extend .middle-price;
+}
+
+.item-view-cellnavigable-product-title{
+	@extend .medium-title-navigable;
+}

@@ -1,0 +1,42 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.creditcard-edit-form-securitycode-group {}
+
+.creditcard-edit-form-securitycode-group-label {
+    @extend .address-edit-fields-group-label;
+}
+
+.creditcard-edit-form-securitycode-group-label-required {
+    @extend .creditcard-edit-form-label-required;
+}
+
+.creditcard-edit-form-securitycode-group-input {
+    @extend .input-xsmall;
+    float: left;
+}
+
+.creditcard-edit-form-securitycode {
+	clear:both;
+}
+
+.creditcard-edit-form-securitycode-controls {
+	@extend .creditcard-edit-form-controls;
+}
+
+.creditcard-edit-form-securitycode-icon-container {
+    @extend .icon-container-info;
+}
+
+.creditcard-edit-form-securitycode-link {
+    float: left;
+    padding:$sc-base-padding * 2;
+}
+
+.creditcard-edit-form-securitycode-icon {
+    @extend .icon-question;
+}

@@ -1,0 +1,101 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-cell-selectable-actionable-navigable {
+	padding-top: $sc-base-padding * 3;
+	padding-bottom: $sc-base-padding * 3;
+}
+.item-views-cell-selectable-actionable-navigable-row:hover {
+	background-color: $sc-color-theme-background-lightest;
+}
+
+.item-views-cell-selectable-actionable-navigable-row:active {
+	background-color: $sc-color-theme-background-light;
+}
+
+.item-views-cell-selectable-actionable-navigable-table {
+	@extend .table-flex-item-actionable-navigable-selectable;
+
+	td {
+		// vertical-align: middle;
+		line-height: 1.8;
+	}
+}
+
+.item-views-cell-selectable-actionable-navigable-select {
+	@extend .table-flex-tdfirst;
+
+	text-align: left;
+	width: 40px;
+	padding-left: 0;
+
+	input{
+		margin: 0;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		text-align: center;
+	}
+}
+
+
+
+.item-views-cell-selectable-actionable-navigable-thumbnail {
+	@extend .table-flex-tdfirst;
+	padding-right: $sc-base-padding * 5;
+	width: $img-small + $sc-base-padding * 5;
+	
+	@media (min-width: $screen-sm-min) {
+		width: $img-medium + $sc-base-padding * 5;
+	}
+}
+
+.item-views-cell-selectable-actionable-navigable-thumbnail-image {
+	width: $img-small;
+
+	@media (min-width: $screen-sm-min) { 
+		width: auto;
+	}
+
+}
+
+
+
+.item-views-cell-selectable-actionable-navigable-details{
+	vertical-align: top;
+}
+
+.item-views-cell-selectable-actionable-navigable-sku {
+	@extend .sku;
+}
+
+.item-views-cell-selectable-actionable-navigable-extras {
+	@media (min-width: $screen-sm-min){
+		text-align: left;	
+	}
+}
+
+.item-views-cell-selectable-actionable-navigable-actions {
+	@extend .table-flex-tdlast;
+
+	@media (min-width: $screen-sm-min){
+		width: 30%;
+	}
+}
+
+
+.item-views-cell-selectable-actionable-navigable-name {
+	a{
+		@extend .small-title-navigable;
+	}
+}
+.item-views-cell-selectable-actionable-navigable-price {}
+.item-views-cell-selectable-actionable-navigable-options {}
+
+.item-views-cell-selectable-actionable-navigable-row.selected {
+	background-color: $sc-color-theme-background-light;
+}

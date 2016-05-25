@@ -1,0 +1,262 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+body{
+    @extend %scroll-y;
+    font-size:$sc-base-font-size;
+}
+
+// Font styles
+//
+// Markup: 
+// <h1>h1 heading</h1><br/>
+// <h2>h2 heading</h2><br/>
+// <h3>h3 heading</h3><br/>
+// <h4>h4 heading</h4><br/>
+// <h5>h5 heading</h5><br/>
+// <p>Lorem ipsum dolor sit amet</p><br/>
+// <b>Lorem ipsum dolor sit amet</b><br/>
+// <strong>Lorem ipsum dolor sit amet</strong><br/>
+// <small>Lorem ipsum dolor sit amet</small><br/>
+// <a>Lorem ipsum dolor sit amet</a>
+//
+// Styleguide 2.1
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight:$sc-font-weight-bold;
+    text-transform: capitalize;
+}
+h1 {
+    font-size:$sc-h1-font-size-mobile;
+    color:$sc-color-dark-copy;
+    line-height: 1.2;
+
+    @media (min-width: $screen-sm-min){
+        font-size:$sc-h1-font-size;
+    }
+}
+h2 {
+    font-size:$sc-h2-font-size-mobile;
+    color:$sc-color-dark-copy;
+
+    @media (min-width: $screen-sm-min){
+        font-size:$sc-h2-font-size;
+    }
+}
+h3 {
+    font-size:$sc-h3-font-size-mobile;
+    color:$sc-color-theme;
+
+    @media (min-width: $screen-sm-min){
+        font-size:$sc-h3-font-size;
+    }
+}
+h4 {
+    font-size:$sc-h4-font-size-mobile;
+    color:$sc-color-dark-copy;
+
+    @media (min-width: $screen-sm-min){
+        font-size:$sc-h4-font-size;
+    }
+}
+h5 {
+    font-size:$sc-h5-font-size;
+    font-weight:$sc-font-weight-bold;
+    color:$sc-color-theme;
+    text-transform: capitalize;
+}
+p {
+    font-size:$sc-base-font-size;
+    color:$sc-color-copy;
+    line-height:1.6;
+}
+small {
+    font-size:$sc-small-font-size;
+    color:$sc-color-theme;
+}
+b {
+    font-weight:$sc-font-weight-bold;
+    color: $sc-color-dark-copy;
+}
+
+
+// Titles styles 
+//
+// .large-title     - Product Titles Large & Product Titles Large navigatable
+// .middle-title    - Product Titles Medium & Product Titles Medium navigatable
+// .small-title     - Product Titles Small & Product Titles Small navigatable
+// .xsmall-title    - Product Titles XSmall & Product Titles XSmall navigatable
+//
+// Markup: 
+//  <div class="{$modifiers}">Lorem ipsum dolor sit amet</div>
+//  <a class="{$modifiers}">Lorem ipsum dolor sit amet</a>
+// 
+// Styleguide 2.2
+
+.large-title{
+    @extend h1;
+}
+
+.large-title-navigable{
+    @extend h1;
+    color:$sc-color-theme;
+}
+
+.large-title-navigable:hover{
+    color:$sc-color-link-hover;
+    text-decoration:none;
+}
+
+.large-title-viewonly{
+    @extend h1;
+    color: $sc-color-dark-copy;
+}
+
+.medium-title{
+    font-weight:$sc-font-weight-semibold;
+    font-size:16px;
+    color: $sc-color-dark-copy;
+}
+
+.medium-title-navigable{
+    font-weight:$sc-font-weight-semibold;
+    color:$sc-color-theme;
+    font-size:16px;
+}
+
+.medium-title-navigable:hover{
+    color:$sc-color-link-hover;
+    text-decoration:none;
+}
+
+.medium-title-viewonly{
+    font-size:16px;
+    color: $sc-color-dark-copy;
+    font-weight:$sc-font-weight-semibold;
+}
+
+.small-title{
+    font-size:15px;
+    font-weight:$sc-font-weight-semibold;
+}
+
+.small-title-viewonly{
+    font-size:15px;
+    font-weight:$sc-font-weight-semibold;
+}
+
+.small-title-navigable{
+    font-size:15px;
+    font-weight:$sc-font-weight-semibold;
+    color:$sc-color-theme;
+}
+
+.small-title-navigable:hover{
+    color:$sc-color-link-hover;
+    text-decoration:none;
+}
+
+.xsmall-title{
+    font-size:$sc-base-font-size;
+    color: $sc-color-dark-copy;
+    font-weight:$sc-font-weight-normal;
+    text-transform: capitalize;
+}
+
+.xsmall-title-navigable{
+    font-size:$sc-base-font-size;
+    font-weight:$sc-font-weight-normal;
+    color:$sc-color-theme;
+    text-transform: capitalize;
+}
+
+.xsmall-title-navigable:hover{
+    color:$sc-color-link-hover;
+    text-decoration:none;
+}
+
+.xsmall-title-viewonly{
+    font-size:$sc-base-font-size;
+    font-weight:$sc-font-weight-normal;
+    text-transform: capitalize;
+}
+
+//  Price styles 
+//
+// .large-price     - Large price
+// .middle-price    - Middle price
+// .small-price     - Small price
+// .old-price       - old price
+// .highlighted     - highlighted
+// .sku             - sku 
+//
+// Markup: <div class="{$modifiers}">$100</div>
+// 
+// Styleguide 2.3
+
+.large-price{
+    @extend h1;
+    color: $sc-color-dark-copy;
+    font-weight:$sc-font-weight-semibold;
+}
+
+.middle-price{
+    font-size:$sc-base-font-size;
+    font-weight:$sc-font-weight-semibold;
+    color: $sc-color-primary;
+}
+
+.small-price{
+    font-size:14px;
+    color: $sc-color-primary;
+}
+
+.old-price{
+    font-size: $sc-base-font-size * 0.7;
+    color: $sc-color-theme;
+    font-weight:$sc-font-weight-light;
+    text-decoration:line-through;
+}
+
+.sku {
+    color:$sc-color-theme-light;
+    font-size:$sc-small-font-size;
+    font-weight:$sc-font-weight-light;
+}
+
+.sc-label{
+    color:$sc-color-light-copy;
+    font-size: 14px;
+}
+
+.sc-label-sku{
+    color:$sc-color-theme-light;
+    font-size:$sc-small-font-size;
+}
+
+.sc-value-sku{
+    color:$sc-color-theme-light;
+    font-size:$sc-small-font-size;
+}
+
+.sc-mobile-label{
+    @media (min-width: $screen-sm-min){
+        display: none;
+    }
+}
+
+.sc-value{
+    color:$sc-color-dark-copy;
+    font-size: 14px;
+}
+
+.sc-highlighted{
+    color: $sc-color-primary;
+}

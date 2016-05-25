@@ -1,0 +1,86 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.reorder-items-actions-quantity-last-purchased{
+	display:block;
+	font-size:$sc-small-font-size;
+}
+
+.reorder-items-actions-quantity-label{
+	font-weight:$sc-font-weight-bold;
+	color:$sc-color-copy;
+	font-size:$sc-base-font-size;
+	line-height:40px;
+	margin-right:$sc-base-margin * 3;
+
+	@media(min-width: $screen-sm-min){
+		float: left;
+	}
+}
+
+.reorder-items-actions-quantity-input {
+	display: inline-flex;
+}
+.reorder-items-actions-quantity-input span.spinner > .sub, .reorder-items-actions-quantity-input span.spinner > .add{
+    float: left;
+    width: 41px;
+    height: 41px;
+    text-align: center;
+    line-height: 41px;
+    color: #FFFFFF;
+    background: #9db4c0;
+    border-right: 0;
+    cursor: pointer;
+    transition: 0.1s linear;
+    -o-transition: 0.1s linear;
+    -ms-transition: 0.1s linear;
+    -moz-transition: 0.1s linear;
+    -webkit-transition: 0.1s linear;
+    margin-right: 4px;
+    @media(min-width: $screen-sm-min){
+		display:none;
+	}
+}
+
+.reorder-items-actions-quantity-input{
+	input{
+		@extend .item-details-quantity-value;
+		float: left;
+		width:60px;
+		background:$sc-color-theme-background-light;
+		padding:0px;
+		@media (min-width: $screen-md-min){
+		float: none;
+		}
+	}
+}
+
+.reorder-items-actions-quantity-add, .reorder-items-actions-quantity-remove{
+	@extend .button-secondary;
+	background-color:lighten($sc-color-theme, 20%);
+	border:1px solid lighten($sc-color-theme, 20%);;
+	width: $sc-target-size-mobile;
+	height: $sc-target-size-mobile;
+	float:left;
+
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}
+}
+
+.reorder-items-actions-quantity-value{
+	height: $sc-target-size-mobile;
+ 	padding:$sc-base-margin * 2 $sc-base-padding * 3 $sc-base-margin * 2 $sc-base-padding * 3;
+ 	width: 90px;
+ 	text-align: right;
+	background-color: #ebf1f4;
+	border: 0;
+	-webkit-border-radius: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	font-weight:$sc-font-weight-normal;
+	float:left;
+}

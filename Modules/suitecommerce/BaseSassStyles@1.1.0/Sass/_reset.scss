@@ -1,0 +1,95 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+html,
+body {
+	font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html, body{
+	min-height:100%;
+	height: auto;
+}
+
+body,
+html,
+div,
+article,
+aside,
+section,
+figure,
+nav,
+h1, h2, h3, h4, h5, h6,
+p, pre, blockquote, ul, ol, dl, address, a, input, textarea, button, fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+address{
+	font-style:normal;
+}
+
+ul, li {
+	list-style: none;
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: $sc-color-link;
+	text-decoration: none;
+	cursor:pointer;
+	cursor:hand;
+}
+
+a:hover, a:focus {
+	color: $sc-color-link-hover;
+	text-decoration: none;
+}
+
+[data-toggle="dropdown"]:hover, [data-toggle="dropdown"]:focus{
+	color: $sc-color-copy;
+}
+
+.open > [data-toggle="dropdown"]{
+	color: $sc-color-dark-copy;
+}
+
+hr{
+	height: 1px;
+	border: 0;
+	background-color: $sc-color-theme-border;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+	width:10px;
+	height:10px;
+}
+::-webkit-scrollbar-thumb{
+	background:0 0;
+	background-color:rgba(50,50,50,.25);
+	border:2px solid transparent;
+	border-radius:10px;
+	background-clip:padding-box;
+}
+::-webkit-scrollbar-thumb:hover{
+	background-color:rgba(50,50,50,.5);
+}
+::-webkit-scrollbar-track{
+	background-color:rgba(50,50,50,.05);
+}

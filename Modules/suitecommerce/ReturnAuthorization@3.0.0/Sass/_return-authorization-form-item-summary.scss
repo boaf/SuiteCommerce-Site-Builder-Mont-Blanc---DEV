@@ -1,0 +1,22 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.return-authorization-form-item-summary-quantity-label {
+	@extend .sc-label;
+}
+.return-authorization-form-item-summary-quantity-value {
+	@extend .sc-value;
+}
+.return-authorization-form-item-summary-quantity-field {
+	@extend .input-small;
+	display: inline-block;
+	margin-right: $sc-base-margin;
+}
+
+.return-authorization-form-item-summary-edit-text{
+	@extend .text-light;
+}

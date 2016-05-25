@@ -1,0 +1,63 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-stock-msg {
+	margin-top: $sc-base-margin * 2;
+	margin-bottom: $sc-base-margin * 2;
+}
+
+.item-views-stock-msg-in {
+	@extend .stock-info-in;
+	@extend .item-views-stock-msg;
+}
+
+.item-views-stock-msg-low {
+	@extend .stock-info-low;
+	@extend .item-views-stock-msg;
+}
+
+.item-views-stock-msg-out {
+	@extend .stock-info-out;
+	@extend .item-views-stock-msg;
+}
+
+.item-views-stock-msg-description {
+	@extend .stock-info-description;
+	@extend .item-views-stock-msg;
+}
+
+.item-views-stock-icon {
+	margin-right:$sc-base-margin;
+}
+
+.item-views-stock-icon-in {
+	@extend .item-views-stock-icon;
+	@extend .stock-info-in-icon;
+}
+
+.item-views-stock-icon-low {
+	@extend .item-views-stock-icon;
+	@extend .stock-info-low-icon;
+}
+
+.item-views-stock-icon-out {
+	margin-right:$sc-base-margin;
+	
+	i {
+		@extend .icon-message-atention;
+	}
+}
+.item-views-stock-icon-description {
+	@extend .item-views-stock-icon;
+	@extend .icon-info;
+	color: $sc-color-theme;
+}
+.item-views-stock-msg-not-available {
+	@extend .global-views-message;
+	@extend .global-views-message-warning;
+}
+.item-views-stock-msg-out-text{}

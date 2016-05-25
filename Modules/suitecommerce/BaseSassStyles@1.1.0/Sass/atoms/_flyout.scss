@@ -1,0 +1,130 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Flyout
+//
+// Markup:
+// <div class="flyout-head">
+// 	<a class="expander-head-toggle" data-toggle="collapse" data-target="#expander-id" aria-expanded="true" aria-controls="expander-id">
+// 		expander title<i class="expander-toggle-icon"></i>
+// 	</a>
+// </div>
+// <div class="expander-body collapse in" id="expander-id" aria-expanded="true">
+// 	<p> some content</p>
+// 	<p> more content</p>
+// </div>
+// 
+// Styleguide 11.2
+
+.sc-flyout-control {
+	@extend .button-tertiary;
+	@extend .button-small;
+	padding: 0 $sc-base-padding * 3;
+	font-weight: $sc-font-weight-semibold;
+	border: 1px solid $sc-color-theme;
+	height: $sc-target-size;
+	line-height: $sc-target-size;
+	text-align:center;
+	cursor:pointer;
+	cursor:hand;
+}
+.sc-flyout-control:focus {
+	outline:0;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+.sc-flyout-toggle-icon{
+	@extend .fa;
+	@extend %fa-angle-down;
+	float:right;
+	height: $sc-target-size;
+	line-height: $sc-target-size;
+	font-size:$sc-h3-font-size;
+	color:$sc-color-secondary;
+	margin-left: $sc-base-margin * 2;
+	@include transition (transform $sc-animation-base-duration ease);
+}
+
+.sc-flyout-content{
+	display:none;
+	opacity: 0;
+	@include transition (opacity $sc-animation-base-duration ease);
+
+
+	border:1px solid $sc-color-theme-border;
+	box-shadow: 0 $sc-flyout-arrow-shadow-height $sc-flyout-arrow-shadow-height * 2 rgba(0, 0, 0, 0.175);
+	left: 0;
+	padding: $sc-base-padding * 5;
+	margin-top: $sc-flyout-arrow-height;
+	background:$sc-pusher-bg;
+	
+	position:absolute;
+	z-index:1;
+	
+	@media (min-width: $screen-sm) {
+		left: auto;
+		right: 0;
+	}
+
+	&:before {
+		position: absolute;
+		top: -$sc-flyout-arrow-height;
+		right: 14px;
+		display: inline-block;
+		border-right: $sc-flyout-arrow-height solid transparent;
+		border-bottom: $sc-flyout-arrow-height solid $sc-color-theme-border;
+		border-left: $sc-flyout-arrow-height solid transparent;
+		border-bottom-color: rgba(0, 0, 0, 0.2);
+		content: '';
+	}
+
+	&:after {
+		position: absolute;
+		top: -$sc-flyout-arrow-shadow-height;
+		right: 15px;
+		display: inline-block;
+		border-right: $sc-flyout-arrow-shadow-height solid transparent;
+		border-bottom: $sc-flyout-arrow-shadow-height solid $sc-color-tertiary;
+		border-left: $sc-flyout-arrow-shadow-height solid transparent;
+		content: '';
+	}
+}
+
+.open .sc-flyout-content {
+	display: block;
+	opacity: 1;
+}
+
+.open .sc-flyout-control {
+	@extend .button-tertiary:hover;
+}
+
+.sc-flyout-control:hover .sc-flyout-toggle-icon,
+.open .sc-flyout-toggle-icon {
+	color: #ffffff;
+}
+
+.open .sc-flyout-toggle-icon{
+	@include rotate(180deg); 
+}
+
+.sc-flyout-bg{
+	background:$sc-color-dark-copy;
+	opacity:0.1;
+	height:100%;
+	width:100%;
+	position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=10);
+    @media (min-width: $screen-sm-min) {
+    	display:none;
+    }
+}

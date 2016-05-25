@@ -1,0 +1,64 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.global-views-message{
+	@extend .message;
+	position:relative;
+	margin-bottom: $sc-medium-margin;
+}
+
+.global-views-message-button {
+	@extend .message-button;
+}
+.global-views-message-success {
+	color: #4a7f35;
+	background-color: #eef7e4;
+
+	p {
+		color: #4a7f35;	
+		font-size:$sc-small-font-size;	
+	}
+}
+.global-views-message-info {
+	color: $sc-color-theme;
+	background-color: $sc-color-theme-background;
+
+	p {
+		color: $sc-color-theme;	
+		font-size:$sc-small-font-size;		
+	}
+}
+.global-views-message-error {
+	color: $sc-color-error;
+  	background-color: $sc-color-error-background;
+
+	p {
+		color: $sc-color-error;	
+		font-size:$sc-small-font-size;		
+	}
+}
+.global-views-message-warning {
+	color: #8e7728;
+  	background-color: #f9f5cd;
+
+	p {
+		color: #8e7728;		
+		font-size:$sc-small-font-size;	
+	}
+}
+.global-views-message-icon-success i {
+	color: #4a7f35;
+}
+.global-views-message-icon-info i {
+	color: $sc-color-theme;
+}
+.global-views-message-icon-error i {
+	color: $sc-color-error;
+}
+.global-views-message-icon-warning i {
+	color: #8e7728;
+}

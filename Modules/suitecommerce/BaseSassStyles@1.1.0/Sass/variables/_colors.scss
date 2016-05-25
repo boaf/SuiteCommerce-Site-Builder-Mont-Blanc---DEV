@@ -1,0 +1,71 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+$sc-color-theme:#5b7f8c;
+$sc-color-theme-light:#9cb6bf;
+$sc-color-theme-background:#e4eff5;
+$sc-color-theme-background-light: lighten($sc-color-theme-background, 3.5);
+$sc-color-theme-background-lightest: lighten($sc-color-theme-background, 6);
+$sc-color-theme-border: desaturate(darken($sc-color-theme-background, 8), 3);
+$sc-color-background-list:#f1f8fa;
+
+$sc-color-primary: #f15c28;
+$sc-color-secondary: #5B7F8C;
+$sc-color-tertiary: #ffffff;
+
+$sc-color-success: #4a7f35;
+$sc-color-success-background: #eef7e4;
+$sc-color-warning: #8e7728;
+$sc-color-warning-background: #f9f5cd;
+$sc-color-error: #C33C48;
+$sc-color-error-background: #FFE9F1;
+$sc-color-info: $sc-color-theme-light;
+$sc-color-info-background: $sc-color-theme-light;
+
+$sc-color-primary-hover: saturate(lighten($sc-color-primary, 4), 10);
+$sc-color-primary-active: desaturate(darken($sc-color-primary, 5), 10);
+$sc-color-primary-disable: lighten($sc-color-primary, 18);
+
+$sc-color-secondary-hover: saturate(lighten($sc-color-secondary, 4), 4);
+$sc-color-secondary-active: darken($sc-color-secondary, 6);
+
+$sc-color-tertiary-hover: $sc-color-secondary;
+$sc-color-tertiary-active: darken($sc-color-secondary, 6);
+
+$sc-color-link: #2f9ac3;
+$sc-color-link-hover: lighten($sc-color-link, 10);
+
+$sc-color-dark-copy: #1f2223;
+$sc-color-copy: #404040;
+$sc-color-light-copy: lighten($sc-color-copy, 22);
+
+//TODO: FIND OUT
+$sc-color-range-off:#dcdcdc;
+$sc-color-range-on: $sc-color-primary;
+
+//Stars
+$sc-color-star-filled:#5b7f8c;
+$sc-color-star-empty:#d0e3ee;
+$sc-color-star-error:#C33C48;
+$sc-color-star-empty-disable:#c7dde9;
+
+// icons
+$sc-color-icon: #ffffff;
+
+//Status
+$sc-color-status: #fe6b38;
+
+$sc-pusher-bg: #ffffff;
+
+//Datepicker
+$sc-days-disabled: #c5dbe7;
+
+//Home Slide Theme
+$sc-color-slide-background:#e9f1f5;
+
+//Placeholder Colors
+$sc-color-placeholder: #aab0b3;

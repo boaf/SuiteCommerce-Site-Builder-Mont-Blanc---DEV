@@ -1,0 +1,136 @@
+<%/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/%>
+
+<%
+
+	var SiteSettings
+	,	siteType
+	,	Environment
+	,	Language
+	,	Currency
+	,	Error
+	,	Application;
+
+	try
+	{
+		Application = require('Application');
+		SiteSettings = require('SiteSettings.Model').get();
+		siteType = SiteSettings.sitetype;
+
+		Environment = Application.getEnvironment(session, request);
+
+		Language = Environment.currentLanguage && Environment.currentLanguage.locale || '';
+		Currency = Environment.currencyCodeSpecifiedOnUrl;
+
+		// Access control, if you are not loged this will send you to the log in page
+		if (!session.isLoggedIn2() || session.getCustomer().isGuest())
+		{
+			var parameters = request.getAllParameters();
+
+			delete parameters.sitepath;
+			parameters.origin = 'customercenter';
+
+			if (parameters.fragment)
+			{
+				parameters.origin_hash = parameters.fragment;
+				delete parameters.fragment;
+			}
+
+			return nlapiSetRedirectURL('EXTERNAL', SiteSettings.touchpoints.login, null, false, parameters);
+		}
+	} catch (e) {
+		Error = Application.processError(e);
+	}
+
+%>
+<!DOCTYPE html>
+<html <%= Language ? 'lang="' + Language.replace('_', '-') + '"' : '' %>>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>My Account</title>
+		<link rel="shortcut icon" href="<%= session.getAbsoluteUrl("checkout", "img/favicon.ico") %>" />
+
+		<!--[if !IE]><!-->
+			<link rel="stylesheet" href="<%= session.getAbsoluteUrl('checkout', 'css/myaccount.css') %>?t={{timestamp}}">
+		<!--<![endif]-->
+
+		<!--[if lte IE 9]>
+		{{#each cssnumbers}}
+			<link rel="stylesheet" href="<%= session.getAbsoluteUrl('checkout', 'css_ie/myaccount_{{this}}.css?t={{../timestamp}}') %>">
+		{{/each}}
+			<link rel="stylesheet" href="<%= session.getAbsoluteUrl('checkout', 'css_ie/myaccount.css?t={{timestamp}}') %>">
+		<![endif]-->
+
+		<!--[if lt IE 9]>
+			<script src="<%= session.getAbsoluteUrl('checkout', 'javascript/html5shiv.min.js') %>"></script>
+		  	<script src="<%= session.getAbsoluteUrl('checkout', 'javascript/respond.min.js') %>"></script>
+		<![endif]-->
+
+		<%= (siteType && siteType === 'STANDARD') ? getPageFullHead() : '' %>
+		<script>
+			{{#js}}
+			var SC = window.SC = {
+				ENVIRONMENT: {
+					jsEnvironment: (typeof nsglobal === 'undefined') ? 'browser' : 'server'
+				}
+			,	isCrossOrigin: function()
+				{
+					return '<%= Environment.currentHostString %>' !== document.location.hostname;
+				}
+			,	isPageGenerator: function()
+				{
+					return typeof nsglobal !== 'undefined';
+				}
+			,	getSessionInfo: function(key)
+				{
+					var session = SC.SESSION || SC.DEFAULT_SESSION || {};
+					return (key) ? session[key] : session;
+				}
+			,	getPublishedObject: function(key)
+				{
+					return SC.ENVIRONMENT && SC.ENVIRONMENT.published && SC.ENVIRONMENT.published[key] ? SC.ENVIRONMENT.published[key] : null;
+				}
+			};
+			{{/js}}
+		</script>
+		<script src="<%= session.getAbsoluteUrl('checkout', 'myaccount.environment.ssp?lang=' + Language + '&cur=' + Currency) %>&t={{timestamp}}"></script>
+		<% if (Error) { %>
+		<script>SC.ENVIRONMENT.contextError = <%= JSON.stringify(Error) %>;</script>
+		<% } %>
+		<script src="<%= session.getAbsoluteUrl('checkout', 'javascript/myaccount.js') %>?t={{timestamp}}"></script>
+
+		<% if (SC.Configuration.useCMS) { %>
+			<script src="/cms/2/assets/js/postframe.js"></script>
+			<script src="/cms/2/cms.js"></script>
+		<% } %>
+	</head>
+	<body>
+
+	<% if (siteType && siteType === 'STANDARD'){ %>
+		<div id='div__header' style="overflow: hidden;" class='noprint' leftmargin='0' topmargin='0' marginwidth='1' >
+			<table border='0' cellspacing='0' cellpadding='0' width='100%'>
+				<%= getPageTop() %>
+			</table>
+		</div>
+	<% } %>
+
+		<noscript>
+			<div class="myaccount-layout-no-javascript-msg">
+				<strong>Javascript is disabled on your browser.</strong><br>
+				To view this site, you must enable JavaScript or upgrade to a JavaScript-capable browser.
+			</div>
+		</noscript>
+
+
+		<div id="main" class="main"></div>
+
+	</body>
+</html>
+
+<%= (function(){ try{ return require('ReleaseMetadata').asHTMLComment(); } catch(ex){return '';}} )() %>

@@ -1,0 +1,8 @@
+{
+	"gulp": {
+		
+		"ssp-files": {
+			"SuiteScript/one.ssp": "MyModule2_one.ssp"
+		}
+    }
+}

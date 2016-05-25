@@ -1,0 +1,113 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.order-wizard-cartitems-module{
+	margin: 0 0 $sc-medium-margin;
+}
+.order-wizard-cartitems-module-accordion-head{
+	@extend .accordion-head;
+}
+.order-wizard-cartitems-module-accordion-head-toggle{
+	@extend .accordion-head-toggle;
+}
+.order-wizard-cartitems-module-accordion-toggle-icon{
+	@extend .accordion-toggle-icon;
+}
+.order-wizard-cartitems-module-accordion-body{
+	@extend .accordion-body;
+
+	.item-view-cell-navigable-item-image{
+		padding-left: 0;
+		width: 25%;
+	}
+	.item-views-cell-navigable-item-quantity-label,
+	.item-views-cell-navigable-item-unit-price-label,
+	.item-views-cell-navigable-item-amount-label,
+	.item-views-cell-navigable-item-quantity-label {
+		display: inline-block;
+		@media (min-width: $screen-md-min){
+			display: none;
+		}
+	}
+}
+
+.lg2sm-first.order-wizard-cartitems-module-table {
+	table-layout: fixed;
+
+	.item-views-cell-navigable-item-quantity-label,
+	.item-views-cell-navigable-item-unit-price-label,
+	.item-views-cell-navigable-item-amount-label,
+	.item-views-cell-navigable-item-quantity-label {
+		display: inline;
+	}
+
+	.item-views-cell-navigable-item-quantity .item-views-cell-navigable-item-quantity-value {
+		display: inline-block;
+		text-align: left;
+	}
+}
+
+.order-wizard-cartitems-module-accordion-container{
+	padding: $sc-base-padding * 4;
+}
+.order-wizard-cartitems-module-accordion-container-table-header {
+	display: none;
+	@media (min-width: $screen-md-min) {
+		display: table-header-group;
+		width: 100%;
+	}
+}
+.order-wizard-cartitems-module-accordion-container-table-header-image {
+	@extend .item-view-cell-navigable-item-image;
+	font-size: $sc-base-font-size;
+	font-weight: $sc-font-weight-semibold;
+}
+.order-wizard-cartitems-module-accordion-container-table-header-details {
+	color:$sc-color-theme-light;
+	font-size: $sc-base-font-size;
+	font-weight: $sc-font-weight-semibold;
+}
+.order-wizard-cartitems-module-accordion-container-table-header-quantity,
+.order-wizard-cartitems-module-accordion-container-table-header-totalprice,
+.order-wizard-cartitems-module-accordion-container-table-header-amount {
+	text-align: right;
+}
+
+
+.order-wizard-cartitems-module-shipment-table{
+	@extend .table-flex-item-navigable;
+}
+.lg2sm-first.order-wizard-cartitems-module-table{
+	.item-views-cell-navigable-item-unit-price,
+	.item-views-cell-navigable-item-quantity,
+	.item-views-cell-navigable-amount {
+		text-align: left;
+	}
+}
+.order-wizard-cartitems-module-edit-cart-label{
+	margin:-$sc-base-margin * 4;
+	margin-bottom:$sc-base-margin * 3;
+	padding: $sc-base-padding * 3 $sc-base-padding * 4;
+	border-bottom:1px solid $sc-color-theme-background;
+}
+.order-wizard-cartitems-module-edit-cart-link{
+	font-size:$sc-base-font-size;
+}
+
+.order-wizard-cartitems-module-products-scroll{
+	@media (min-width: $screen-sm-min){
+		max-height:570px;
+		overflow-y:auto;
+		overflow-x:hidden;	
+	}
+	.item-view-cell-navigable-item-quantity-label {
+		display: inline-block;
+	}
+}
+.order-wizard-cartitems-module-table{
+	@extend .table-flex-item-navigable;
+}

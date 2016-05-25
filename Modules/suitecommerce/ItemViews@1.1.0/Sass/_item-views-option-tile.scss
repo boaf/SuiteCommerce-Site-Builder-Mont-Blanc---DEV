@@ -1,0 +1,33 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-option-tile {
+	@extend .clearfix;
+	width: 100%;
+    margin-top: $sc-base-margin * 4;
+}
+.item-views-option-tile-title {
+	text-transform: uppercase;
+ 	margin-bottom: $sc-base-margin * 2;
+}
+.item-views-option-tile-picker {	
+	@extend .picker-lg;
+	margin-bottom: $sc-base-margin * 2;
+
+    li:last-child a {
+        margin-bottom: 0;
+    }
+}
+
+.facets-facet-browse-items .item-views-option-tile-picker {
+	@extend .picker-sm;
+}
+.facets-facet-browse-items .item-views-option-tile-title {
+	display: none;
+}
+
+.item-views-option-tile-anchor{}

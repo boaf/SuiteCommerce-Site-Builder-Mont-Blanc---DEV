@@ -1,0 +1,37 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.cart-item-actions-item-list-actionable-edit-button{
+	@extend .item-views-cell-actionable-edit-button;
+}
+
+.cart-item-actions-item-list-actionable-edit-button-edit{
+	@extend .item-views-cell-actionable-edit-button-edit;
+	padding: 13px 16px;
+}
+
+.cart-item-actions-item-list-actionable-edit-button-drop{
+	@extend .item-views-cell-actionable-edit-button-drop;
+	padding: 13px 16px;
+}
+
+.cart-item-actions-item-list-actionable-edit-content{
+	@extend .split-button-dropdown;
+    @extend .dropdown-menu;
+	padding: $sc-base-padding * 2 0;
+
+	li>a{
+		padding: $sc-base-padding * 2 $sc-base-padding * 3;
+	}
+}
+
+.cart-item-actions-item-list-actionable-edit-content-saveforlater {}
+
+.cart-item-actions-item-list-actionable-edit-content-remove-sb{
+	@extend .button-tertiary;
+	@extend .button-small;
+}

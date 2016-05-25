@@ -1,0 +1,125 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.cart-detailed{
+	@extend .cart;
+
+	.item-views-selected-option-color-label-text, .cart-item-summary-item-list-actionable-amount-label,
+	.cart-item-summary-item-list-actionable-label-qty{
+		color: $sc-color-dark-copy;
+		font-weight: 600;
+	}
+
+	.item-views-selected-option {
+		.item-views-selected-option-label{
+			color: $sc-color-dark-copy;
+			font-weight: 600;
+		}
+	}
+}
+
+.cart-detailed-view-header{
+	@extend .view-header;
+}
+
+.cart-detailed-title{
+	@extend .cart-title;
+}
+
+.cart-detailed-title-details-count{
+	@extend .cart-title-details-count;
+	@extend .middle-price;
+}
+
+.cart-detailed-confirm-message{
+	@extend .confirm-message;
+}
+
+.cart-detailed-right{
+	@extend .cart-right;
+	margin-top: $sc-base-margin * 4;
+	@media (min-width: $screen-md-min) {
+		margin-top:  $sc-base-margin * 3;
+	}
+}
+
+.cart-detailed-body{
+	@extend .cart-body;
+}
+
+.cart-detailed-left{
+	@extend .cart-left;
+}
+
+.cart-detailed-footer{
+	@extend .cart-footer;
+}
+
+.cart-detailed-header{
+	@extend .cart-header;
+}
+
+.cart-detailed-savedforlater{
+	@extend .cart-savedforlater;
+}
+
+.cart-detailed-proceed-to-checkout-container{
+	@extend .cart-proceed-to-checkout-container;
+}
+
+.cart-detailed-proceed-to-checkout{
+	@extend .cart-proceed-to-checkout;
+}
+
+.cart-detailed-body-empty{
+	@extend .cart-body-empty;
+}
+
+.cart-detailed-body-empty-title{
+	@extend .cart-body-empty-title;
+}
+
+.cart-detailed-body-empty-info{
+	@extend .cart-body-empty-info;
+}
+
+.cart-detailed-row-fluid{
+	@extend .row-fluid;
+}
+
+.cart-detailed-recently-viewed{
+	@extend .cart-recently-viewed;
+}
+
+.cart-detailed-related{
+	@extend .cart-related;
+}
+
+.cart-detailed-correlated{
+	@extend .cart-correlated;
+}
+
+.cart-detailed-item-view-cell-actionable-table{
+	@extend .item-views-cell-actionable-table;
+  	border-collapse: collapse;
+
+	.item-views-cell-actionable-table-middle, .item-views-cell-actionable-table-first, 
+	.item-views-cell-actionable-table-last {
+    	padding-bottom: 0;
+
+		@media (min-width: $screen-md-min) {
+			padding-bottom: 80px;
+		}
+	}
+
+	td {
+		padding-bottom: 80px;
+	}
+}
+
+.cart-detailed-table-row-with-border{
+}

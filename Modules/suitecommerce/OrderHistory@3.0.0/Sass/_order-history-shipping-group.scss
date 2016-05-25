@@ -1,0 +1,136 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.order-history-shipping-group-shipping-address-subtitle{
+	@extend .text-light;
+	margin:$sc-base-margin * 4 0;
+	display:block;
+	color:$sc-color-secondary;
+	font-weight:$sc-font-weight-semibold;
+}
+
+.order-history-shipping-group-accordion-head{
+	@extend .accordion-head;
+}
+
+
+.order-history-shipping-group-accordion-head{
+	@extend .accordion-head;
+}
+
+.order-history-shipping-group-accordion-head-toggle{
+	@extend .accordion-head-toggle;
+}
+
+.order-history-shipping-group-accordion-toggle-icon{
+	@extend .accordion-toggle-icon;
+}
+
+.order-history-shipping-group-accordion-body{
+	@extend .accordion-body;
+}
+
+.order-history-shipping-group-accordion-body-no-header{
+	@extend .accordion-body;
+	border-top: 1px solid $sc-color-theme-border;
+}
+
+.order-history-shipping-group-acordion-divider{
+	@extend .accordion-divider;
+}
+
+.order-history-shipping-group-accordion-container{
+	@extend .accordion-container;
+}
+
+.order-history-shipping-group-information-details{
+	background:$sc-color-theme-background-light;
+	margin-bottom:$sc-medium-margin;
+	padding:$sc-base-padding * 4;
+}
+.order-history-shipping-group-information-info{
+	margin-bottom:$sc-small-margin;
+}
+
+.order-history-shipping-group-details-info-card-delivery-method {
+	@extend .order-history-details-info-card-delivery-method;
+}
+
+.order-history-shipping-group-info-card-info {
+	@extend .order-history-details-info-card-info;
+}
+
+.order-history-shipping-group-info-card-title {
+	@extend .order-history-details-info-card-title;
+}
+
+.order-history-shipping-group-info-card {
+	@extend .order-history-details-info-card;
+}
+
+.order-history-shipping-group-info-card-info-shipping {
+	@extend .order-history-details-info-card-info-shipping;
+}
+
+.order-history-shipping-group-info-card-container {
+	@extend .order-history-details-info-card-container;
+}
+
+.order-history-shipping-group-accordion-container {
+	@extend .order-history-details-accordion-container;
+	.item-views-cell-actionable-line-tr{
+		margin-bottom:$sc-small-margin;
+	}
+}
+
+.order-history-shipping-group-accordion-body {
+	@extend .order-history-details-accordion-body;
+}
+
+.order-history-shipping-group-accordion-toggle-icon {
+	@extend .order-history-details-accordion-toggle-icon;
+}
+
+.order-history-shipping-group-accordion-toggle-icon-secondary {
+	@extend .order-history-details-accordion-toggle-icon-secondary;
+}
+
+.order-history-shipping-group-accordion-head-toggle {
+	@extend .order-history-details-accordion-head-toggle;
+}
+
+.order-history-shipping-group-accordion-head-toggle-secondary {
+	@extend .order-history-details-accordion-head-toggle-secondary;
+}
+
+.order-history-shipping-group-accordion-head {
+	@extend .order-history-details-accordion-head
+}
+
+.order-history-shipping-group-shipping-accordion-divider{
+	@extend .order-history-details-shipping-accordion-divider;
+}
+
+.order-history-shipping-group-shipping-title {
+	@extend .order-history-details-shipping-title;
+}
+
+.order-history-shipping-group-shipping-information {
+	@extend .order-history-details-shipping-information
+}
+
+.order-history-shipping-group-pending-table{
+	@extend .item-views-cell-actionable-table;
+}
+
+.order-history-shipping-group-body-no-header {
+	@extend .order-history-shipping-group-accordion-body-no-header;
+}
+
+.order-history-shipping-group-shipto-name {
+	text-transform:capitalize;
+}

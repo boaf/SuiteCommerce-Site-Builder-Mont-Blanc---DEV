@@ -1,0 +1,95 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Accordion
+//
+// Markup:
+// <div class="accordion-head">
+// 	<a class="accordion-head-toggle" data-toggle="collapse" data-target="#accordion-id" aria-expanded="true" aria-controls="accordion-id">
+// 		accordion title<i class="accordion-toggle-icon"></i>
+// 	</a>
+// </div>
+// <div class="accordion-body collapse in" id="accordion-id" aria-expanded="true">
+// 	<p> some content</p>
+// 	<p> more content</p>
+// </div>
+// 
+// Styleguide 11.2
+
+
+.accordion-head{
+	@extend .small-title;
+}
+
+.accordion-head-toggle,
+.accordion-head-toggle-secondary{
+	display: block;
+	cursor:pointer;
+	background-color: $sc-color-tertiary;
+	height: 100%;
+	line-height: $sc-target-size;
+	padding: 0 $sc-base-padding * 4;
+	font-size:$sc-base-font-size;
+	border:1px solid $sc-color-theme-border;
+}
+
+.accordion-head-toggle{
+	color:$sc-color-theme;
+	font-weight:$sc-font-weight-bold;
+}
+
+.accordion-head-toggle-secondary{
+	color:$sc-color-copy;
+}
+
+.accordion-head-toggle:hover,
+.accordion-head-toggle-secondary:hover{
+	text-decoration:none;
+	color:$sc-color-dark-copy;
+}
+
+.accordion-toggle-icon,
+.accordion-toggle-icon-secondary{
+	@extend .fa;
+	@extend %fa-angle-up;
+	float:right;
+	height: $sc-target-size;
+	line-height: $sc-target-size;
+	font-size:$sc-h2-font-size;
+	color:$sc-color-secondary;
+	@include transition (transform $sc-animation-base-duration ease)
+}
+
+.collapsed .accordion-toggle-icon,
+.collapsed .accordion-toggle-icon-secondary{
+	@include rotate(180deg); 
+}
+
+.accordion-body,
+.accordion-body-alt{
+	overflow:hidden;
+	background-color:$sc-pusher-bg;
+	border:1px solid $sc-color-theme-border;
+	border-top:0px;
+	width:100%;
+}
+
+.accordion-body{
+	background-color:$sc-pusher-bg;
+}
+
+.accordion-body-alt{
+	background-color:$sc-color-theme-background-light;
+}
+
+.accordion-container{
+	margin: $sc-base-margin * 4;
+}
+
+.accordion-container-table{
+	margin:0;
+}

@@ -1,0 +1,35 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Thumbnails Image Sizes
+//
+// .thumbnail-large   	- Image Large
+// .thumbnail-medium    - Image Medium
+// .thumbnail-small  	- Image Small
+//
+// Markup: <img class="{$modifiers}" src="../app_migrate/images/item-list-items-1.jpg"/>
+// 
+// Styleguide 7.1
+
+.thumbnail-large{
+	width:$sc-image-large-size;
+	height:$sc-image-large-size;
+	display: inline-block;
+
+}
+
+.thumbnail-medium{
+	width:$sc-image-medium-size;
+	height:$sc-image-medium-size;
+	display: inline-block;
+}
+
+.thumbnail-small{
+	width:$sc-image-small-size;
+	height:$sc-image-small-size;
+	display: inline-block;
+}

@@ -1,0 +1,36 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-views-option-text {
+	width: 100%;
+	margin-bottom: $sc-base-margin * 2;
+}
+
+.item-views-option-text-title {
+    @extend .input-label;
+ 	margin-bottom: $sc-base-margin * 2;
+}
+
+.item-views-option-text-input {
+	@extend .input-medium;
+}
+
+[data-action="sc-pushing"] .item-views-option-text-input {
+    width: 100%;
+}
+
+.item-views-option-text-area {
+	@extend .input-textarea;
+}
+
+.item-views-option-text-title-required {
+	@extend .input-required;
+}
+
+.item-views-option-text-required-reference-container {
+	padding:$sc-base-padding * 3 0;
+}

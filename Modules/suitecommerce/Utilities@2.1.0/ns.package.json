@@ -1,0 +1,9 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/Utils.js",
+            "JavaScript/Console.Polyfill.js",
+            "JavaScript/Utilities.ResizeImage.js"
+        ]
+    }
+}

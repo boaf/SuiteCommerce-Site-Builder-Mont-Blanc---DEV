@@ -1,0 +1,170 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.cart{
+	@extend .container;
+}
+
+.cart-title{
+	margin-bottom:$sc-medium-margin;
+	padding-bottom:$sc-base-padding * 2;
+	border-bottom:1px solid $sc-color-theme-border;
+
+	@media (min-width: $screen-sm-min) {
+		margin-bottom:$sc-large-margin;
+	}
+}
+
+.cart-title-details-count{
+	display:block;
+	color:$sc-color-primary;
+	text-transform: capitalize;
+
+	@media(min-width: $screen-sm-min){
+		display:inline-block;
+	}
+}
+
+.cart-body{
+	@extend .row;
+	margin-bottom:$sc-large-margin;
+	padding-bottom:$sc-base-padding * 2;
+	border-bottom:1px solid $sc-color-theme-border;
+}
+
+.cart-left{
+	@extend .col-sm-7;
+	@extend .col-lg-8;
+}
+
+.cart-left {
+	.items-views-selected-option-color-tile{
+		
+	}
+
+	.items-views-selected-option-picker{
+		display: none;
+	}
+	.items-views-selected-option-label,
+	.items-views-selected-option-color p {
+		margin-bottom: 0;
+	}
+}
+.cart-right{
+	@extend .col-sm-5;
+	@extend .col-lg-4;
+}
+
+.button-proceed-checkout{
+	@extend .button-large;
+	@extend .button-generic;
+	@extend .button-primary;
+}
+
+.btn-paypal-express {
+  text-align: center;
+  margin-top: $sc-base-margin * 3;	
+}
+// sticky
+.cart-proceed-to-checkout-container {
+	margin-bottom: $sc-medium-margin;
+	@media (min-width: $screen-sm-min) {
+		display: none;
+	}
+}
+.cart-proceed-to-checkout {
+	@extend .button-proceed-checkout;
+}
+
+.button-saveforlater{
+	@extend .push-button-primary;
+	margin-bottom: $sc-large-margin;
+}
+
+.button-saveforlater-addtocart{
+	@extend .button-large;
+	@extend .button-primary;
+	display: block;
+	margin-bottom: $sc-small-margin;
+}
+
+.button-saveforlater-remove{
+	@extend .button-small;
+	@extend .button-tertiary;
+	display: block;
+	margin-bottom: $sc-large-margin;
+}
+
+.saveforlater-actions{
+	clear:both;
+	display:block;
+}
+
+.saveforlater-cell{
+	@extend .col-xs-12;
+	@extend .col-sm-3;
+}
+
+.cart-savedforlater [data-pusher]{
+	background:$sc-pusher-bg;
+}
+
+.product-list-details-later-col{
+	padding-right:$sc-base-padding * 3;
+}
+
+.product-list-details-later-macro-details span.spinner > .sub, .product-list-details-later-macro-details span.spinner > .add{
+    float: left;
+    width: 41px;
+    height: 41px;
+    text-align: center;
+    line-height: 41px;
+    color: #FFFFFF;
+    background: #9db4c0;
+    border-right: 0;
+    cursor: pointer;
+    transition: 0.1s linear;
+    -o-transition: 0.1s linear;
+    -ms-transition: 0.1s linear;
+    -moz-transition: 0.1s linear;
+    -webkit-transition: 0.1s linear;
+    margin-right: 4px;
+    @media(min-width: $screen-sm-min){
+		display:none;
+	}
+}
+
+.item-views-cell-actionable-table span.spinner > .sub, .item-views-cell-actionable-table span.spinner > .add{
+    float: left;
+    width: 41px;
+    height: 41px;
+    text-align: center;
+    line-height: 41px;
+    color: #FFFFFF;
+    background: #9db4c0;
+    border-right: 0;
+    cursor: pointer;
+    transition: 0.1s linear;
+    -o-transition: 0.1s linear;
+    -ms-transition: 0.1s linear;
+    -moz-transition: 0.1s linear;
+    -webkit-transition: 0.1s linear;
+    margin-right: 4px;
+    @media(min-width: $screen-sm-min){
+		display:none;
+	}
+}
+
+.button-saveforlater-addtocart{
+	display:inline-block;
+	width:auto;
+}
+
+.cart-body-empty-title {}
+.cart-body-empty-info {
+	margin-bottom:$sc-large-margin;	
+}

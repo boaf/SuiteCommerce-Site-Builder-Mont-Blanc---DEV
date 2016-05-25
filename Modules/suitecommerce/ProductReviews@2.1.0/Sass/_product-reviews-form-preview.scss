@@ -1,0 +1,77 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.product-reviews-form-preview {
+  @extend .product-reviews-form;
+}
+.product-reviews-form-preview-item-cell {
+    @extend .product-reviews-form-item-cell;
+}
+.product-reviews-form-preview-content {
+    @extend .product-reviews-form-content;
+}
+.product-reviews-form-preview-new {
+    @extend .product-reviews-form-new;
+}
+.product-reviews-form-preview-content-title{
+    @extend .product-reviews-form-content-title;
+}
+.product-reviews-form-preview-content-label-required {
+    @extend .product-reviews-form-content-label-required;
+}
+.product-reviews-form-preview-content-required {
+    @extend .product-reviews-form-content-required;
+}
+.product-reviews-form-preview-content-group {
+    @extend .product-reviews-form-content-group;
+}
+.product-reviews-form-preview-content-groups {
+    @extend .product-reviews-form-content-groups;
+}
+.product-reviews-form-preview-content-group-label {
+    @extend .product-reviews-form-content-group-label;
+}
+.product-reviews-form-preview-content-group-input {
+    @extend .product-reviews-form-content-group-input;
+}
+.product-reviews-form-preview-content-group-text {
+    @extend .product-reviews-form-content-group-text;
+}
+.product-reviews-form-preview-help {
+    @extend .input-optional;
+}
+.product-reviews-form-preview-actions {
+    @extend .product-reviews-form-actions;
+    margin: 0;
+}
+.product-reviews-form-preview-actions-button-submit {
+    @extend .product-reviews-form-actions-button-submit;
+}
+.product-reviews-form-preview-actions-button-edit {
+    @extend .product-reviews-form-actions-button-preview;
+}
+.product-reviews-form-preview-actions-button-cancel  {
+    @extend .button-tertiary;
+    @extend .button-large;
+    margin-bottom: $sc-base-margin * 2;
+    margin-left: 0;
+    text-align: center;
+
+    @media (min-width: $screen-sm-min){
+        margin-left: $sc-base-margin * 2;
+    }
+}
+
+.product-reviews-form-preview-divider-desktop{
+    @extend .item-details-divider-desktop;
+}
+
+.product-reviews-form-preview-divider{
+    @extend .item-details-divider;
+}
+
+.product-reviews-form-preview-main{}

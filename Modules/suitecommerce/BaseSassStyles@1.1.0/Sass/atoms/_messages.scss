@@ -1,0 +1,111 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Basic messages
+//
+// .message-info  		- Information message
+// .message-success    	- Success message
+// .message-warning 	- Warning message
+// .message-error		- Error message
+// .message-info.message-large		- Large information message
+//
+// Markup:
+// <p class="{$modifiers}">
+// 	this is a <strong>information</strong> message
+// </p>
+// 
+// Styleguide 5.1
+
+.message{
+	padding: $sc-base-padding * 2;
+	font-size: $sc-small-font-size;
+	display:inline-block;
+	position: relative;
+
+	div {
+	  padding-right: $sc-base-padding * 6;
+	  display: inline-block;
+	}
+}
+
+.message-large{
+	width: 100%;
+	display:block;
+}
+
+.message-info{
+	@extend .message;
+	color: $sc-color-theme;
+	background-color: $sc-color-theme-background;
+}
+
+.message-success{
+	@extend .message;
+	color: $sc-color-success;
+	background-color: $sc-color-success-background;
+}
+
+.message-warning{
+	@extend .message;
+	color: $sc-color-warning;
+	background-color: $sc-color-warning-background;
+}
+
+.message-error{
+	@extend .message;
+	color: $sc-color-error;
+	background-color: $sc-color-error-background;
+	margin-bottom:$sc-base-margin * 3;
+}
+
+.message-button {
+  margin-left: $sc-base-margin * 2;
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  -webkit-appearance: none;
+  background: 0 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  line-height: 20px;
+  background: #FFF;
+}
+// Messages with icons
+//
+// Markup:
+// <p class="message-warning">
+// 	<i class="message-icon fa-info-circle"></i>
+// 	this is a information message with icon (the specific class should extend the icon)
+// </p>
+// 
+// Styleguide 5.2
+
+.message-icon{
+	@extend .fa;
+	margin-right: $sc-base-margin;
+}
+
+// Messages with buttons
+//
+// Markup:
+// <p class="message-warning">
+// 	this is a information message with close button
+// 	<button class="message-icon-close"></button>
+// </p>
+// 
+// Styleguide 5.3
+
+.message-icon-close{
+	@extend .fa;
+	@extend %fa-close;
+	color: $sc-color-theme;
+	background: #fff;
+	border-radius: 100%;
+	padding: $sc-base-padding;
+	margin-left: $sc-base-margin;
+}

@@ -1,0 +1,64 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.login-register-login-description{
+	margin-top: $sc-medium-margin;
+	margin-bottom: $sc-medium-margin;
+}
+
+.login-register-login-form-controls-group{
+	@extend .control-group;
+}
+
+.login-register-login-form-label {
+	@extend .input-label;
+}
+
+.login-register-login-form-required {
+	@extend .input-required;
+}
+
+.login-register-login-form-input {
+	@extend .input-large;
+}
+
+.login-register-login-submit {
+	@extend .button-large;
+	@extend .button-primary;
+}
+
+.login-register-login-forgot {
+
+	display:inline-block;
+	margin-top: $sc-medium-margin;
+
+	@media (min-width: $screen-sm-min) {
+		margin-top: 0;
+		margin-left: $sc-small-margin;
+	}
+}
+
+.login-register-login-form-messages {
+	@extend .form-messages;
+}
+
+.login-register-login-form-controls-group {
+	@extend .login-register-register-form-controls-group;
+}
+
+
+.login-register-login-form-controls {
+	@extend .login-register-register-form-controls;
+}
+
+.login-register-login-register-now{
+	padding-left:$sc-base-padding * 2;
+}
+
+.login-register-login-title{}
+.login-register-login-required{}
+.login-register-login-form-fieldset{}

@@ -1,0 +1,124 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.wizard-step-navigation{
+	@include clearfix();
+}
+
+.wizard-step-navigation-back{
+	@extend .button-back;
+	float:left;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+
+.wizard-step-navigation-back-icon{
+	@extend .button-back-icon;
+}
+
+
+.wizard-step-navigation-menu{
+	float:right;
+	position:relative;
+
+	&:before{
+		content: ' ';
+		background-color: $sc-color-theme-border;
+		height: 3px;
+		display: block;
+		position: absolute;
+		top: 50%;
+		margin-top: -1px;
+		z-index: -1;
+		width: 95%;
+	}
+
+	@media (min-width: $screen-sm-min){
+		float: none;
+		&:before{
+			display: none;
+			content: none;
+			height: 0;
+		}
+	}
+}
+
+.wizard-step-navigation-step-anchor{
+	display:block;
+	width: 30px; //different than $sc-target-size by design
+	height: 30px;
+	border: 3px solid transparent;
+	line-height: 24px;
+	margin-right: 3px;
+	text-align: center;
+	background-color: $sc-color-theme-background;
+
+	@extend .small-title-viewonly;
+	@include border-radius(100%);
+
+	@media (min-width: $screen-sm-min){
+		width: auto;
+		height: auto;
+		background-color: #fff;
+	}
+}
+
+.wizard-step-navigation-disabled{
+	border-color: $sc-color-theme-border;
+	background-color: #fff;
+	color: $sc-color-theme-light;
+	cursor: default;
+
+	&:hover, &:visited, &:focus{
+		color: $sc-color-theme-light;
+	}
+
+	@media (min-width: $screen-sm-min){
+		border-color: transparent;
+	}
+}
+
+.wizard-step-navigation-active{
+	background-color:  $sc-color-theme;
+	color: #fff;
+	cursor: default;
+
+	&:hover{
+		color: #fff;
+	}
+
+	&:visited, &:focus{
+		color: $sc-color-copy;
+	}
+
+	@media (min-width: $screen-sm-min){
+		color: $sc-color-copy;
+		background-color: transparent;
+
+		&:hover, &:focus{
+			color: $sc-color-copy;
+		}
+	}
+}
+
+.wizard-step-navigation-step {
+	display:inline-block;
+}
+
+.wizard-step-navigation-divider,
+.wizard-step-navigation-step-anchor-label{
+
+	display:none;
+
+	@media (min-width: $screen-sm-min){
+		display: inline-block;
+	}
+}
+
+.wizard-step-navigation-divider{
+	color: $sc-color-theme-light;
+}

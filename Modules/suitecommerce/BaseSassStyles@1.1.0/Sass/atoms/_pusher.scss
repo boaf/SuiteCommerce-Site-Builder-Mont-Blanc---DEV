@@ -1,0 +1,165 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+/* 
+    ################################################################
+    Pusher right. slider element that slides in from the right
+    - always cover full page height
+    - on phone devices it is full width (default)
+    - on tablet or desktop it has a fixed width (via media query)
+*/
+
+.sc-pushing {
+    position:fixed;
+}
+
+$sc-pusher-width-xs: 100%;
+$sc-pusher-width-md: 472px;
+
+$sc-pusher-left-separation: 20px;
+$sc-pusher-right-separation: 20px;
+
+// mobile only
+[data-pusher="sc-pushable-xs"]{
+    width: $sc-pusher-width-xs;
+    right: -$sc-pusher-width-xs;
+    background:$sc-pusher-bg;
+
+    @include transition-transform(400ms ease);
+
+    &.sc-pushing-reopened {
+        transition: none;
+    }
+
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding-left: $sc-pusher-left-separation;
+    padding-right: $sc-pusher-right-separation;
+    padding-bottom: $sc-base-padding * 8;
+
+    .sc-pusher-header {
+        margin-left: -$sc-pusher-left-separation;
+        margin-right: -$sc-pusher-right-separation;
+        @media (min-width: $screen-sm-min) {
+            display: none;
+        }
+    }
+
+    @media (min-width: $screen-sm-min) {
+        @extend %scroll-y;
+        width: auto;
+        height: auto;
+        position: static;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// both tablet and mobile
+[data-pusher="sc-pushable-md"]{
+    width: $sc-pusher-width-xs;
+    right: -$sc-pusher-width-xs;
+    background:$sc-pusher-bg;
+
+    @include transition-transform(400ms ease);
+
+    &.sc-pushing-reopened {
+        transition: none;
+    }
+
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding-left: $sc-pusher-left-separation;
+
+    .sc-pusher-header {
+        margin-left: -$sc-pusher-left-separation;
+        @media (min-width: $screen-md-min) {
+            display: none;
+        }
+    }
+
+    @media (min-width: $screen-sm-min) {
+        width: $sc-pusher-width-md;
+        right: -$sc-pusher-width-md;
+    }
+
+    @media (min-width: $screen-md-min) {
+        @extend %scroll-y;
+        width: auto;
+        height: auto;
+        position: static;
+        padding-left: 0;
+    }
+}
+
+
+[data-pusher="sc-pushable-xs"][data-action="sc-pushing"]{
+    @include translate3d(-$sc-pusher-width-xs, 0, 0);
+    @media (min-width: $screen-sm-min){
+        transform: none;
+    }
+}
+
+[data-pusher="sc-pushable-md"][data-action="sc-pushing"]{
+    @media (min-width: $screen-sm-min){
+        @include translate3d(-$sc-pusher-width-md, 0, 0);
+    }
+    @include translate3d(-$sc-pusher-width-xs, 0, 0);
+    @media (min-width: $screen-md-min){
+        transform: none;
+    }
+}
+
+$sc-push-header-height: 69px;
+
+.sc-pusher-header {
+    background: $sc-color-theme-background;
+    border-bottom: 1px solid $sc-color-theme-border;;
+    margin-bottom: $sc-base-margin * 4;
+    height: $sc-push-header-height;
+}
+
+.sc-pusher-header-back {
+    color: $sc-color-link;
+    text-transform: capitalize;
+    display: inline-block;
+    width:50%;
+    line-height: $sc-push-header-height;
+    padding-left: $sc-base-padding * 2;
+}
+.sc-pusher-header-back:after {
+    font-family: FontAwesome;
+    content: "\f053";
+    float: left;
+    margin-right: $sc-base-margin * 2;
+}
+
+.sc-pushing-partial {
+    overflow-y: hidden;
+}
+
+.main-push-overlay {
+
+    display: none;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+
+        &.active {
+            display: block;
+        }
+    }
+}
